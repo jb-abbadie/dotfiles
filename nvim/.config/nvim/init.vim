@@ -19,6 +19,7 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'fatih/vim-go'
 Plug 'janko-m/vim-test'
 Plug 'saltstack/salt-vim'
+Plug 'dag/vim-fish'
 
 " Misc
 Plug 'mhinz/vim-grepper'
