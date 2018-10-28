@@ -32,7 +32,14 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+q exec alacritty -e bash
 bindsym $mod+Return exec alacritty
+bindsym $mod+e exec alacritty -e ranger
 bindsym --release $mod+Control+l exec slock
+
+# Drop down term
+exec alacritty --class metask
+for_window [class="metask"] floating enable;
+for_window [class="metask"] move scratchpad; [class="metask"] scratchpad show; border pixel 1; move position 0px 0px; resize shrink height 96px; resize grow width 1350px; move scratchpad
+bindsym $mod+c [class="metask"] scratchpad show
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -80,7 +87,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+x layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -165,8 +172,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+for_window [class="mpv"] floating enable
+for_window [class="mpv"] border pixel 1
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status -c ~/.config/i3/i3status_$(hostname).conf
+        status_command i3status -c ~/.config/i3/i3status_$(hostname -s).conf
+        tray_output HDMI-1
 }
