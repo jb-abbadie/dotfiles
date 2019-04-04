@@ -172,6 +172,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+for_window [title="Unlock Database - KeePassXC"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="mpv"] border pixel 1
 
