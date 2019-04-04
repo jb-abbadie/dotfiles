@@ -233,6 +233,8 @@ mouse:
   triple_click: { threshold: 300 }
   hide_when_typing: false
   unfocused_hollow: true
+  url:
+    launcher: None
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
