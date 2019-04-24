@@ -183,5 +183,5 @@ for_window [class="mpv"] border pixel 1
 # finds out, if available)
 bar {
         status_command i3status -c ~/.config/i3/i3status_$(hostname -s).conf
-        tray_output HDMI-1
+        tray_output primary
 }
