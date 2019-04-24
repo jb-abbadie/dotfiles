@@ -24,7 +24,6 @@ Plug 'dag/vim-fish'
 
 " Misc
 Plug 'mhinz/vim-grepper'
-Plug 'neomake/neomake'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'

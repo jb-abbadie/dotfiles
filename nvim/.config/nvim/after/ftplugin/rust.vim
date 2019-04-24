@@ -1,4 +1,3 @@
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'nightly', 'rls',],
     \ }
-call neomake#configure#automake('rw', 500)
