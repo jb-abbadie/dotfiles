@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/jb/project/dev-toolbox/setup-workstation'
-let g:netrw_dirhist_2='/home/jb/project/platform_jenkins-slaves-ecs/jenkins-slave-base'
-let g:netrw_dirhist_3='/home/jb/project/platform_csq_hydra/csq_address_controller'
-let g:netrw_dirhist_4='/home/jb/project/platform_csq_hydra/csq_model'
-let g:netrw_dirhist_5='/home/jb/project/app-services/services'
-let g:netrw_dirhist_6='/home/jb/project/app-services/services/gateway-web'
