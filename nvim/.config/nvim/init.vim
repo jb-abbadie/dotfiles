@@ -21,6 +21,7 @@ Plug 'zchee/deoplete-go'
 Plug 'janko-m/vim-test'
 Plug 'saltstack/salt-vim'
 Plug 'dag/vim-fish'
+Plug 'hashivim/vim-terraform'
 
 " Misc
 Plug 'mhinz/vim-grepper'
