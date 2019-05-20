@@ -12,6 +12,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'lifepillar/vim-solarized8'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
 
 " Language
 Plug 'vivien/vim-addon-linux-coding-style'
@@ -19,15 +20,15 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go'
 Plug 'janko-m/vim-test'
-Plug 'saltstack/salt-vim'
-Plug 'dag/vim-fish'
 Plug 'hashivim/vim-terraform'
 
 " Misc
 Plug 'mhinz/vim-grepper'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'luochen1990/rainbow'
 
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
@@ -42,9 +43,10 @@ runtime! macros/matchit.vim
 " Appearance
 " ==========
 syntax enable
-set termguicolors
 set background=dark
+set termguicolors
 colorscheme solarized8
+let g:rainbow_active = 1
 
 set noshowmode                                  " Let airline handle the mode display
 
@@ -165,6 +167,10 @@ nmap <silent> <leader>g :TestVisit<CR>
 " LanguageClient
 " ==============
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+
+" NerdTree
+" ========
+map <C-n> :NERDTreeToggle<CR>
 
 
 " Airline options
