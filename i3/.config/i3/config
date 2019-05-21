@@ -35,12 +35,6 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+e exec alacritty -e ranger
 bindsym --release $mod+Control+l exec loginctl lock-session
 
-# Drop down term
-exec alacritty --class metask
-for_window [class="metask"] floating enable;
-for_window [class="metask"] move scratchpad; [class="metask"] scratchpad show; border pixel 1; move position 0px 0px; resize shrink height 96px; resize grow width 1350px; move scratchpad
-bindsym $mod+c [class="metask"] scratchpad show
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -108,7 +102,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: term"
 set $ws2 "2: web"
-set $ws3 "3"
+set $ws3 "3: utils"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -179,8 +173,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-assign [class="Chromium"] "2: web"
-assign [class="Slack"] "2: web"
+assign [class="Chromium"] $ws2
+assign [class="Slack"] $ws2
+assign [class="Alacritty"] $ws1
+assign [class="pavucontrol"] $ws3
 
 for_window [title="Unlock Database - KeePassXC"] floating enable
 for_window [class="mpv"] floating enable
