@@ -33,6 +33,7 @@ floating_modifier $mod
 bindsym $mod+q exec alacritty -e bash
 bindsym $mod+Return exec alacritty
 bindsym $mod+e exec alacritty -e ranger
+bindsym $mod+t exec maim -s | xclip -selection clipboard -t image/png
 bindsym --release $mod+Control+l exec loginctl lock-session
 
 # kill focused window
