@@ -1,3 +1,3 @@
 # My dotfiles
 
-They are stored using [stow](https://www.gnu.org/software/stow/)
+They are stored using [chezmoi](https://github.com/twpayne/chezmoi)

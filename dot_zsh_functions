@@ -1,0 +1,7 @@
+
+vault_diff () {
+    ansible-vault --vault-password-file=~/.ansible_vault_passwd view group_vars/all/vault.yml > /tmp/new
+    git show origin/master:group_vars/all/vault.yml | ansible-vault --vault-password-file=~/.ansible_vault_passwd view - > /tmp/master
+    meld /tmp/new /tmp/master
+}
+
