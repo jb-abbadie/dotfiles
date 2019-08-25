@@ -1,0 +1,5 @@
+alias ls="ls -v --color=auto -F --group-directories-first"
+alias ll="ls -lh"
+alias l="ll"
+alias vim=nvim
+
