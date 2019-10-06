@@ -61,7 +61,6 @@ set number                      " Line numbers are nice
 set backspace=indent,eol,start  " Allow backspace in insert mode
 set history=1000                " Store lots of :cmdline history
 set showcmd                     " Show incomplete cmds down the bottom
-set gcr=a:blinkon0              " Disable cursor blink
 set autoread                    " Reload files changed outside vim
 set laststatus=2                " Always show status line
 set hidden                      " Buffers can exist in the background
