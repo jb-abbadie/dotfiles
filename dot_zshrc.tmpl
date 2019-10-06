@@ -46,3 +46,7 @@ zplug load
 source /usr/share/zsh/site-functions/_pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+{{ if eq .chezmoi.fullHostname "laptop-jb" }}
+source ~/bin/aws-ssh.sh
+{{ end }}
