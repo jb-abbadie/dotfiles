@@ -8,7 +8,7 @@
     signingkey = {{ .git_gpg_key }}
 {{ end }}
 [core]
-    autocrlf = input
+    excludesfile = /home/jb/.gitignore_global
 
 [push]
     default = simple
@@ -21,3 +21,6 @@
 
 [color]
     ui = auto
+
+[alias]
+    lg = log  --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --decorate
