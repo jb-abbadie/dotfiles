@@ -16,7 +16,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " Language
 Plug 'vivien/vim-addon-linux-coding-style'
-Plug 'chase/vim-ansible-yaml'
+Plug 'ingydotnet/yaml-vim'
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go'
 Plug 'janko-m/vim-test'
