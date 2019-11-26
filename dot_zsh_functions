@@ -5,3 +5,18 @@ vault_diff () {
     meld /tmp/new /tmp/master
 }
 
+zsh_terraform() {
+  # break if there is no .terraform directory
+  if [[ -d .terraform ]]; then
+    local tf_workspace=$(t12 workspace show)
+    echo -n "行$tf_workspace"
+  fi
+}
+
+# Terraform Segment
+POWERLEVEL9K_CUSTOM_TERRAFORM="zsh_terraform"
+POWERLEVEL9K_CUSTOM_TERRAFORM_BACKGROUND=005
+POWERLEVEL9K_CUSTOM_TERRAFORM_FOREGROUND=000
+
+# Add terraform segment to your prompt
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_terraform)
