@@ -8,7 +8,7 @@ vault_diff () {
 zsh_terraform() {
   # break if there is no .terraform directory
   if [[ -d .terraform ]]; then
-    local tf_workspace=$(terraform workspace show)
+    local tf_workspace=$(cat .terraform/environment)
     echo -n "行$tf_workspace"
   fi
 }
