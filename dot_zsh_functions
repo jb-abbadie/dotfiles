@@ -13,10 +13,7 @@ zsh_terraform() {
   fi
 }
 
-# Terraform Segment
-POWERLEVEL9K_CUSTOM_TERRAFORM="zsh_terraform"
-POWERLEVEL9K_CUSTOM_TERRAFORM_BACKGROUND=005
-POWERLEVEL9K_CUSTOM_TERRAFORM_FOREGROUND=000
-
-# Add terraform segment to your prompt
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_terraform)
+mfa() {
+    aws sts get-session-token --serial-number $1 --token-code $2 --output text| awk '{printf("export AWS_ACCESS_KEY_ID=\"%s\"\nexport AWS_SECRET_ACCESS_KEY=\"%s\"\nexport AWS_SESSION_TOKEN=\"%s\"\nexport AWS_SECURITY_TOKEN=\"%s\"\n",$2,$4,$5,$5)}' | tee ~/.token_file
+    source ~/.token_file
+}
