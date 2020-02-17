@@ -46,6 +46,10 @@ source /usr/share/zsh/site-functions/_pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+{{- if index . "reviewers" }}
+alias gpr=hub pull-request -r {{ .reviewers }}
+{{ end }}
+
 {{- if eq .chezmoi.fullHostname "laptop-jb" }}
 source ~/bin/aws-ssh.sh
 {{ end }}
