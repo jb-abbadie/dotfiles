@@ -27,6 +27,7 @@ Plug 'cespare/vim-toml'
 " Misc
 Plug 'mhinz/vim-grepper'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug '/usr/bin/fzf'
