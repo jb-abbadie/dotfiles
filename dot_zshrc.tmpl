@@ -47,9 +47,10 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 {{- if index . "reviewers" }}
-alias gpr=hub pull-request -r {{ .reviewers }}
+alias gpr="hub pull-request -r {{ .reviewers }}"
 {{ end }}
 
 {{- if eq .chezmoi.fullHostname "laptop-jb" }}
 source ~/bin/aws-ssh.sh
 {{ end }}
+complete -o nospace -C "${HOME}/.terraform.versions/terraform_0.12.23" terraform_0.12.23
