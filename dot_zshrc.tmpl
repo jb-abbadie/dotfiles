@@ -52,5 +52,6 @@ alias gpr="hub pull-request -r {{ .reviewers }}"
 
 {{- if eq .chezmoi.fullHostname "laptop-jb" }}
 source ~/bin/aws-ssh.sh
-{{ end }}
+autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C "${HOME}/.terraform.versions/terraform_0.12.23" terraform_0.12.23
+{{ end }}
