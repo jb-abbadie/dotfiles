@@ -1,7 +1,7 @@
 " Go Stuff
 " ============
 let g:LanguageClient_serverCommands = {
-    \ 'go': ['~/prog/go/bin/go-langserver'],
+    \ 'go': ['gopls'],
     \ }
 
 

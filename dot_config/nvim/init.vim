@@ -18,7 +18,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vivien/vim-addon-linux-coding-style'
 Plug 'ingydotnet/yaml-vim'
 Plug 'fatih/vim-go'
-Plug 'zchee/deoplete-go'
 Plug 'janko-m/vim-test'
 Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
@@ -186,6 +185,10 @@ let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
 let g:deoplete#enable_at_startup = 1
+
+let g:python3_host_prog = '/home/jb/.pyenv/versions/pynvim/bin/python'
+let g:python_host_prog = '/home/jb/.pyenv/versions/py2_pynvim/bin/python'
+
 inoremap <silent><expr> <TAB>
             \ pumvisible() ? "\<C-n>" :
             \ <SID>check_back_space() ? "\<TAB>" :
