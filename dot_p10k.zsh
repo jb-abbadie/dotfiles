@@ -345,7 +345,6 @@
 
   # Custom prefix.
   # typeset -g POWERLEVEL9K_DIR_PREFIX='in '
-  typeset -g POWERLEVEL9K_KUBECONTEXT_FOREGROUND=000
 
   #####################################[ vcs: git status ]######################################
   # Version control system colors.
@@ -1281,7 +1280,7 @@
       # '*prod*'  PROD    # These values are examples that are unlikely
       # '*test*'  TEST    # to match your needs. Customize them as needed.
       '*'       DEFAULT)
-  typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND=7
+  typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND=0
   typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_BACKGROUND=5
   # typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
