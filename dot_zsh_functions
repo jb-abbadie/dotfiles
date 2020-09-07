@@ -1,19 +1,5 @@
-
 vault_diff () {
     ansible-vault --vault-password-file=~/.ansible_vault_passwd view group_vars/all/vault.yml > /tmp/new
     git show origin/master:group_vars/all/vault.yml | ansible-vault --vault-password-file=~/.ansible_vault_passwd view - > /tmp/master
     meld /tmp/new /tmp/master
-}
-
-zsh_terraform() {
-  # break if there is no .terraform directory
-  if [[ -f .terraform/environment ]]; then
-    local tf_workspace=$(cat .terraform/environment)
-    echo -n "行$tf_workspace"
-  fi
-}
-
-mfa() {
-    aws sts get-session-token --serial-number $1 --token-code $2 --output text| awk '{printf("export AWS_ACCESS_KEY_ID=\"%s\"\nexport AWS_SECRET_ACCESS_KEY=\"%s\"\nexport AWS_SESSION_TOKEN=\"%s\"\nexport AWS_SECURITY_TOKEN=\"%s\"\n",$2,$4,$5,$5)}' | tee ~/.token_file
-    source ~/.token_file
 }
