@@ -2,6 +2,6 @@ alias ls="ls -v --color=auto -F --group-directories-first"
 alias ll="ls -lh"
 alias l="ll"
 alias vim=nvim
-alias t13="terraform_0.13.0"
+alias t13="terraform_0.13.2"
 alias t12="terraform_0.12.29"
 alias t11="terraform_0.11.14"
