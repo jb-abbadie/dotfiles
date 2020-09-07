@@ -35,7 +35,6 @@
     # =========================[ Line #1 ]=========================
     virtualenv
     dir
-    custom_terraform
     kubecontext             # current kubernetes context (https://kubernetes.io/)
     pyenv                   # python environment (https://github.com/pyenv/pyenv)
     terraform
@@ -44,10 +43,6 @@
     newline                 # \n
     # prompt_char           # prompt symbol
   )
-
-  typeset -g POWERLEVEL9K_CUSTOM_TERRAFORM="zsh_terraform"
-  typeset -g POWERLEVEL9K_CUSTOM_TERRAFORM_BACKGROUND=005
-  typeset -g POWERLEVEL9K_CUSTOM_TERRAFORM_FOREGROUND=000
 
   # The list of segments shown on the right. Fill it with less important segments.
   # Right prompt on the last prompt line (where you are typing your commands) gets
