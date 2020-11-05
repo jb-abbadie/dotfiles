@@ -22,6 +22,7 @@ Plug 'janko-m/vim-test'
 Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
+Plug 'towolf/vim-helm'
 
 " Misc
 Plug 'mhinz/vim-grepper'
@@ -199,3 +200,5 @@ function! s:check_back_space() abort "{{{
 endfunction"}}}
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+autocmd BufRead,BufNewFile *gotmpl set ft=helm
