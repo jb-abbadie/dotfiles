@@ -1,3 +1,3 @@
 let g:LanguageClient_serverCommands = {
-    \ 'terraform': ['terraform-ls'],
+    \ 'terraform': ['terraform-ls', 'serve'],
     \ }
