@@ -175,7 +175,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-assign [class="Chromium"] $ws2
+assign [class="firefox"] $ws2
 assign [class="Slack"] $ws2
 assign [class="Alacritty"] $ws1
 assign [class="Pavucontrol"] $ws3
@@ -187,7 +187,7 @@ for_window [title="Unlock Database - KeePassXC"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="mpv"] border pixel 1
 
-exec chromium
+exec firefox
 exec slack
 exec alacritty
 exec keepassxc
