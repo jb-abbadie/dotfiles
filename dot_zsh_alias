@@ -4,6 +4,7 @@ alias l="ll"
 
 alias vim=nvim
 
+alias t="terraform"
 alias t14="terraform_0.14.2"
 alias t13="terraform_0.13.5"
 alias t12="terraform_0.12.29"
