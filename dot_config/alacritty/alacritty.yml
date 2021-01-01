@@ -214,7 +214,7 @@ mouse:
   hide_when_typing: false
   unfocused_hollow: true
   url:
-    launcher: None
+    launcher: xdg-open
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
