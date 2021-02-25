@@ -185,9 +185,7 @@ assign [class="Alacritty"] $ws1
 assign [class="Pavucontrol"] $ws3
 assign [class="Virt-manager" ] $ws3
 assign [class="zoom" ] $ws4
-assign [class="keepassxc" title="Locked"] $ws3
 
-for_window [title="Unlock Database - KeePassXC"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="mpv"] border pixel 1
 
