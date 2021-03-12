@@ -34,6 +34,7 @@ bindsym $mod+q exec alacritty -e bash
 bindsym $mod+Return exec alacritty
 bindsym $mod+e exec alacritty -t ranger -e ranger
 bindsym $mod+t exec maim -s | xclip -selection clipboard -t image/png
+bindsym $mod+shift+u exec autorandr undocked
 bindsym --release $mod+Control+l exec loginctl lock-session
 
 # kill focused window
