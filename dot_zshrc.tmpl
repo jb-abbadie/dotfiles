@@ -48,12 +48,15 @@ source /usr/share/zsh/site-functions/_pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# Completion
+fpath=( ~/.zfunc "${fpath[@]}" )
+autoload -U compinit; compinit
+
 {{- if index . "reviewers" }}
 alias gpr="hub pull-request -r {{ .reviewers }}"
 {{ end }}
 
 {{- if eq .chezmoi.fullHostname "laptop-jb" }}
-source ~/bin/aws-ssh.sh
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C ${HOME}/.terraform.versions/terraform_0.12.29 terraform_0.12.29
 complete -o nospace -C ${HOME}/.terraform.versions/terraform_0.13.0 terraform_0.13.0
