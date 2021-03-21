@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Language
 Plug 'janko-m/vim-test'
 Plug 'towolf/vim-helm'
+Plug 'fatih/vim-go'
 
 " Misc
 Plug 'mhinz/vim-grepper'
@@ -71,7 +72,7 @@ set termguicolors
 colorscheme solarized8
 let g:rainbow_active = 1
 
-set noshowmode                                  " Let airline handle the mode display
+set noshowmode
 
 " Leader commands
 " ===============
@@ -120,8 +121,8 @@ set wrap                              " wrap lines
 
 " Python config
 " =============
-let g:python3_host_prog = '/home/jb/.pyenv/versions/pynvim/bin/python'
-let g:python_host_prog = '/home/jb/.pyenv/versions/py2_pynvim/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/pynvim/bin/python'
+let g:python_host_prog = '~/.pyenv/versions/py2_pynvim/bin/python'
 
 
 " Folds
@@ -174,6 +175,11 @@ map <C-r> :Grepper<CR>
 nmap gs  <plug>(GrepperOperator)
 xmap gs  <plug>(GrepperOperator)
 
+" vim-go
+" ======
+let g:go_gopls_enabled = 0
+let g:go_fmt_command = 'goimports'
+
 " Airline options
 " ===============
 let g:airline#extensions#tabline#enabled = 1
@@ -181,84 +187,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
-
-" nvim-compe
+" Lua config
 " ==========
-set completeopt=menuone,noselect
-let g:compe = {}
-let g:compe.enabled = v:true
-let g:compe.autocomplete = v:true
-let g:compe.debug = v:false
-let g:compe.min_length = 1
-let g:compe.preselect = 'enable'
-let g:compe.throttle_time = 80
-let g:compe.source_timeout = 200
-let g:compe.incomplete_delay = 400
-let g:compe.max_abbr_width = 100
-let g:compe.max_kind_width = 100
-let g:compe.max_menu_width = 100
-let g:compe.documentation = v:true
-
-let g:compe.source = {}
-let g:compe.source.path = v:true
-let g:compe.source.buffer = v:true
-let g:compe.source.calc = v:true
-let g:compe.source.nvim_lsp = v:true
-let g:compe.source.nvim_lua = v:true
-let g:compe.source.vsnip = v:true
-
-lua << EOF
-
-require'lspconfig'.gopls.setup{}
-require'lspconfig'.rls.setup{}
-require'lspconfig'.terraformls.setup{}
-
-local t = function(str)
-  return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
-
-local check_back_space = function()
-    local col = vim.fn.col('.') - 1
-    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        return true
-    else
-        return false
-    end
-end
-
--- Use (s-)tab to:
---- move to prev/next item in completion menuone
---- jump to prev/next snippet's placeholder
-_G.tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-n>"
-  elseif vim.fn.call("vsnip#available", {1}) == 1 then
-    return t "<Plug>(vsnip-expand-or-jump)"
-  elseif check_back_space() then
-    return t "<Tab>"
-  else
-    return vim.fn['compe#complete']()
-  end
-end
-_G.s_tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-p>"
-  elseif vim.fn.call("vsnip#jumpable", {-1}) == 1 then
-    return t "<Plug>(vsnip-jump-prev)"
-  else
-    return t "<S-Tab>"
-  end
-end
-
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    }
-}
-
-EOF
+luafile ~/.config/nvim/config.lua
