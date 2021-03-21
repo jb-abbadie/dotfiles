@@ -10,19 +10,22 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'lifepillar/vim-solarized8'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 
 " Language
 Plug 'janko-m/vim-test'
 Plug 'towolf/vim-helm'
 Plug 'fatih/vim-go'
 
+" Finder
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 " Misc
-Plug 'mhinz/vim-grepper'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
 Plug 'luochen1990/rainbow'
 
 " LSP/treesitter
@@ -167,13 +170,10 @@ map <C-n> :NERDTreeToggle<CR>
 
 " FZF
 " ===
-map <C-p> :FZF<CR>
-
-" Grepper
-" =======
-map <C-r> :Grepper<CR>
-nmap gs  <plug>(GrepperOperator)
-xmap gs  <plug>(GrepperOperator)
+map <C-p> :Telescope find_files<CR>
+map <C-r> :Telescope live_grep<CR>
+map <C-n> :Telescope file_browser<CR>
+nnoremap <leader>ff :Telescope grep_string<CR>
 
 " vim-go
 " ======
