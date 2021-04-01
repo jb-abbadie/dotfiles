@@ -1,3 +1,13 @@
+-- ==============
+-- lualine config
+-- ==============
+require('lualine').setup{
+    options = {
+        theme = 'solarized',
+        extensions = { 'fugitive' }
+    }
+}
+
 -- ===========
 -- LSP configs
 -- ===========

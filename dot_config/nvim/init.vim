@@ -8,8 +8,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
 Plug 'lifepillar/vim-solarized8'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " Language
@@ -179,13 +178,6 @@ nnoremap <leader>ff :Telescope grep_string<CR>
 " ======
 let g:go_gopls_enabled = 0
 let g:go_fmt_command = 'goimports'
-
-" Airline options
-" ===============
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
 
 " Lua config
 " ==========
