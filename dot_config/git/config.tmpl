@@ -1,10 +1,11 @@
 [user]
     email = jb-abbadie@users.noreply.github.com
     name = jb-abbadie
+[commit]
+    verbose = true
 {{ if index . "git_gpg_key" }}
 [commit]
     gpgSign = true
-    verbose = true
 [user]
     signingkey = {{ .git_gpg_key }}
 {{ end }}
