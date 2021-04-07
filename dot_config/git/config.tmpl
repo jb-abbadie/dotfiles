@@ -9,8 +9,13 @@
 [user]
     signingkey = {{ .git_gpg_key }}
 {{ end }}
+
 [core]
     excludesfile = /home/jb/.gitignore_global
+    pager = diff-so-fancy | less --tabs=4 -RFX
+
+[interactive]
+    diffFilter = diff-so-fancy --patch
 
 [push]
     default = simple
