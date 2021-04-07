@@ -22,6 +22,9 @@ source ~/.zsh_alias
 source ~/.zsh_functions
 source ~/.zsh_completions
 source ~/.zsh_bindkeys
+{{- if eq .chezmoi.hostname "laptop-jb" }}
+source ~/.zsh_functions_private
+{{- end }}
 
 # FZF
 source /usr/share/fzf/key-bindings.zsh
