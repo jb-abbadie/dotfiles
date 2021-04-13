@@ -170,7 +170,7 @@ map <C-n> :NERDTreeToggle<CR>
 " FZF
 " ===
 map <C-p> :Telescope find_files<CR>
-map <C-r> :Telescope live_grep<CR>
+map <C-g> :Telescope live_grep<CR>
 map <C-n> :Telescope file_browser<CR>
 nnoremap <leader>ff :Telescope grep_string<CR>
 
