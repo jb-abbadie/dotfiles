@@ -5,6 +5,9 @@ require('lualine').setup{
     options = {
         theme = 'solarized',
         extensions = { 'fugitive' }
+    },
+    sections = {
+          lualine_c = { {'filename', full_name = true}},
     }
 }
 
@@ -13,6 +16,7 @@ require('lualine').setup{
 -- ===========
 
 local nvim_lsp = require('lspconfig')
+local configs = require 'lspconfig/configs'
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -63,6 +67,22 @@ local servers = { "gopls", "rls", "terraformls", "pyls" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
+
+
+if not nvim_lsp.golangcilsp then
+ 	configs.golangcilsp = {
+		default_config = {
+			cmd = {'golangci-lint-langserver'},
+			root_dir = nvim_lsp.util.root_pattern('.git', 'go.mod'),
+			init_options = {
+					command = { "golangci-lint", "run", "--disable", "lll", "--out-format", "json" };
+			}
+		};
+	}
+end
+nvim_lsp.golangcilsp.setup {
+	filetypes = {'go'}
+}
 
 -- ===================
 -- nvim-compe settings
