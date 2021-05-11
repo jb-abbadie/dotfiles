@@ -12,3 +12,4 @@ alias t12="terraform_0.12.30"
 alias t11="terraform_0.11.14"
 
 alias gdc="git diff --cached"
+alias gcm="git checkout master"
