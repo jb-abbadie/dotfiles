@@ -7,8 +7,11 @@ require('lualine').setup{
         extensions = { 'fugitive' }
     },
     sections = {
-          lualine_c = { {'filename', full_name = true}},
-    }
+          lualine_c = { {'filename', path = 1}},
+    },
+    inactive_sections = {
+          lualine_c = { {'filename', path = 1}},
+    },
 }
 
 -- ===========
