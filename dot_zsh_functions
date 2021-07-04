@@ -1,10 +1,8 @@
-vault_diff () {
-    ansible-vault --vault-password-file=~/.ansible_vault_passwd view group_vars/all/vault.yml > /tmp/new
-    git show origin/master:group_vars/all/vault.yml | ansible-vault --vault-password-file=~/.ansible_vault_passwd view - > /tmp/master
-    meld /tmp/new /tmp/master
-}
-
 tw() {
     tfswitch
     terraform workspace list |fzf |xargs terraform workspace select
+}
+
+update_pacman_mirrors () {
+    sudo reflector --verbose --latest 5 --protocol https --sort rate --age 12 --save /etc/pacman.d/mirrorlist
 }
