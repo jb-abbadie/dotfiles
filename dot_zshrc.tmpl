@@ -36,7 +36,7 @@ bindkey '^S' fzf-cd-widget
 setopt noflowcontrol
 
 # Keychain
-eval `keychain --agents ssh,gpg --systemd --eval --quiet`
+eval `keychain --agents ssh --systemd --eval --quiet`
 
 # Zplug
 source /usr/share/zsh/scripts/zplug/init.zsh
