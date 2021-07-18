@@ -1,2 +1,17 @@
 #!/bin/bash
-yay -S --needed fzf tmux ripgrep fd zsh diff-so-fancy
+sudo pacman -S --needed \
+    alacritty \
+    bat \
+    dog \
+    dunst \
+    fzf \
+    fd \
+    jq \
+    hyperfine \
+    keychain \
+    maim \
+    tmux \
+    ripgrep \
+    slock \
+    xclip \
+    zsh
