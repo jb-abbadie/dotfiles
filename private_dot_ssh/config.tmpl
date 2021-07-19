@@ -2,6 +2,7 @@ Host github.com
   IdentityFile {{ .github_ssh_key }}
   ConnectTimeout 5
   ConnectionAttempts 5
+  ControlMaster no
 
 Host *
   User {{ .ssh_user }}
