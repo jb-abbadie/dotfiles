@@ -66,7 +66,7 @@ local on_attach = function(client, bufnr)
   end
 end
 
-local servers = { "gopls", "rls", "terraformls", "pyls" }
+local servers = { "gopls", "rls", "terraformls", "pylsp" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
