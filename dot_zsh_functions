@@ -6,3 +6,9 @@ tw() {
 update_pacman_mirrors () {
     sudo reflector --verbose --latest 5 --protocol https --sort rate --age 12 --save /etc/pacman.d/mirrorlist
 }
+
+clean_tf_ws () {
+    tfswitch
+    t workspace select default
+    for ws in $(t workspace list|grep -v default); do t workspace delete $ws;done
+}
