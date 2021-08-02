@@ -1,6 +1,6 @@
 tw() {
     tfswitch
-    terraform workspace list |fzf |xargs terraform workspace select
+    export TF_WORKSPACE=$(terraform workspace list |cut -c3- |fzf)
 }
 
 update_pacman_mirrors () {
@@ -9,6 +9,7 @@ update_pacman_mirrors () {
 
 clean_tf_ws () {
     tfswitch
+    unset TF_WORKSPACE
     t workspace select default
-    for ws in $(t workspace list|grep -v default); do t workspace delete $ws;done
+    for ws in $(t workspace list| cut -c3- |grep -v default); do TF_WORKSPACE=default t workspace delete $ws;done
 }
