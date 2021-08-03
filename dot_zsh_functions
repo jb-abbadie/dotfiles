@@ -1,5 +1,6 @@
 tw() {
     tfswitch
+    unset TF_WORKSPACE
     export TF_WORKSPACE=$(terraform workspace list |cut -c3- |fzf)
 }
 
