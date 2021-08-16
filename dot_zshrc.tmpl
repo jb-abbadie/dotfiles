@@ -61,9 +61,7 @@ alias gpr="hub pull-request -r {{ .reviewers }}"
 
 {{- if eq .chezmoi.hostname "laptop-jb" }}
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C ${HOME}/.terraform.versions/terraform_0.12.29 terraform_0.12.29
-complete -o nospace -C ${HOME}/.terraform.versions/terraform_0.13.0 terraform_0.13.0
-complete -o nospace -C ${HOME}/.terraform.versions/terraform_0.14.3 terraform_0.14.3
+complete -o nospace -C ${HOME}/.terraform.versions/terraform_1.0.4 terraform
 {{ end }}
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
