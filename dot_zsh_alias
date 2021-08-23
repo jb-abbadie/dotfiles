@@ -9,4 +9,3 @@ alias t="terraform"
 alias tf="terraform_1.0.4"
 
 alias gdc="git diff --cached"
-alias gcm="git checkout master"
