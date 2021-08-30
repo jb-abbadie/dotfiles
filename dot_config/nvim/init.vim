@@ -16,9 +16,7 @@ Plug 'janko-m/vim-test'
 Plug 'towolf/vim-helm'
 Plug 'fatih/vim-go'
 
-Plug 'hashivim/vim-terraform'
 Plug 'vim-syntastic/syntastic'
-Plug 'juliosueiras/vim-terraform-completion'
 
 " Finder
 Plug 'nvim-lua/popup.nvim'
