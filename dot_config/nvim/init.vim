@@ -16,8 +16,6 @@ Plug 'janko-m/vim-test'
 Plug 'towolf/vim-helm'
 Plug 'fatih/vim-go'
 
-Plug 'vim-syntastic/syntastic'
-
 " Finder
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -26,7 +24,7 @@ Plug 'nvim-telescope/telescope.nvim'
 " Misc
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 Plug 'luochen1990/rainbow'
 
 " LSP/treesitter
