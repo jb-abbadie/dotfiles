@@ -14,7 +14,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 " Language
 Plug 'janko-m/vim-test'
 Plug 'towolf/vim-helm'
-Plug 'fatih/vim-go'
+Plug 'ray-x/go.nvim'
 
 " Finder
 Plug 'nvim-lua/popup.nvim'
@@ -178,11 +178,6 @@ map <C-p> :Telescope find_files<CR>
 map <C-g> :Telescope live_grep<CR>
 map <C-n> :Telescope file_browser<CR>
 nnoremap <leader>ff :Telescope grep_string<CR>
-
-" vim-go
-" ======
-let g:go_gopls_enabled = 0
-let g:go_fmt_command = 'goimports'
 
 " Lua config
 " ==========
