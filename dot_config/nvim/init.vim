@@ -7,7 +7,7 @@ set shellpipe=2>/dev/null>
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
-Plug 'lifepillar/vim-solarized8'
+Plug 'ishan9299/nvim-solarized-lua'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
@@ -76,7 +76,7 @@ noremap   <Right>  <NOP>
 syntax enable
 set background=dark
 set termguicolors
-colorscheme solarized8
+colorscheme solarized
 let g:rainbow_active = 1
 
 set noshowmode
