@@ -87,9 +87,9 @@ nvim_lsp.golangcilsp.setup {
 	filetypes = {'go'}
 }
 
--- ===================
--- nvim-compe settings
--- ===================
+-- =================
+-- nvim-cmp settings
+-- =================
 
 local cmp = require'cmp'
 cmp.setup({
@@ -142,7 +142,17 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 
+
+-- ======
+-- Golang
+-- ======
 require('go').setup()
 
 vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').gofmt() ]], false)
 vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
+
+
+-- =========
+-- Terraform
+-- =========
+vim.api.nvim_exec([[ autocmd BufWritePre *.tf :silent! lua vim.lsp.buf.formatting() ]], false)
