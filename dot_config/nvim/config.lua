@@ -156,3 +156,14 @@ vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').
 -- Terraform
 -- =========
 vim.api.nvim_exec([[ autocmd BufWritePre *.tf :silent! lua vim.lsp.buf.formatting() ]], false)
+
+require("tmux").setup({
+    navigation = {
+        -- enables default keybindings (C-hjkl) for normal mode
+        enable_default_keybindings = true,
+    },
+    resize = {
+        -- enables default keybindings (A-hjkl) for normal mode
+        enable_default_keybindings = true,
+    }
+})

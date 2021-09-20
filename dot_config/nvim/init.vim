@@ -26,6 +26,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdcommenter'
 Plug 'luochen1990/rainbow'
+Plug 'aserowy/tmux.nvim'
 
 " Completion
 Plug 'hrsh7th/nvim-cmp'
