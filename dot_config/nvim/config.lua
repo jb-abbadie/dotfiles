@@ -66,26 +66,10 @@ local on_attach = function(client, bufnr)
   end
 end
 
-local servers = { "gopls", "rls", "terraformls", "pylsp" }
+local servers = { "gopls", "golangci_lint_ls", "rls", "terraformls", "pylsp" , "tsserver"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
-
-
-if not nvim_lsp.golangcilsp then
- 	configs.golangcilsp = {
-		default_config = {
-			cmd = {'golangci-lint-langserver'},
-			root_dir = nvim_lsp.util.root_pattern('.git', 'go.mod'),
-			init_options = {
-					command = { "golangci-lint", "run", "--disable", "lll", "--out-format", "json" };
-			}
-		};
-	}
-end
-nvim_lsp.golangcilsp.setup {
-	filetypes = {'go'}
-}
 
 -- =================
 -- nvim-cmp settings
