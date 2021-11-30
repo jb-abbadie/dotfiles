@@ -12,7 +12,6 @@ Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " Language
-Plug 'janko-m/vim-test'
 Plug 'towolf/vim-helm'
 Plug 'ray-x/go.nvim'
 
