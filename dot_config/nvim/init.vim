@@ -35,6 +35,10 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'ray-x/cmp-treesitter'
 
+" Debug
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+
 " LSP/treesitter
 Plug 'neovim/nvim-lspconfig'
 Plug 'onsails/lspkind-nvim'
