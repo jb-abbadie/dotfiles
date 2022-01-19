@@ -1,0 +1,3 @@
+xrandr --auto
+numlockx &
+exec i3
