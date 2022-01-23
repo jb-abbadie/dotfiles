@@ -26,6 +26,7 @@
 .config/cni
 .config/dconf
 .config/deluge
+.config/dlv
 .config/easytag
 .config/gconf
 .config/glib-2.0
