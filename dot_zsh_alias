@@ -4,9 +4,10 @@ alias l="ll"
 
 alias vim=nvim
 
+alias docker="podman"
 alias k="kubectl"
 alias t="terraform"
-alias tf="terraform_1.0.4"
 alias sp="steampipe"
 
 alias gdc="git diff --cached"
+
