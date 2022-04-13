@@ -66,7 +66,7 @@ local on_attach = function(client, bufnr)
   end
 end
 
-local servers = { "gopls", "golangci_lint_ls", "rls", "terraformls", "pylsp" , "tsserver"}
+local servers = { "gopls", "golangci_lint_ls", "rls", "terraformls", "pylsp" , "tsserver", "jsonnet_ls"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
@@ -117,7 +117,7 @@ cmp.setup({
 -- Treesitter config
 -- =================
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = "maintained",
+    ensure_installed = "all",
     highlight = {
         enable = true,
     },
