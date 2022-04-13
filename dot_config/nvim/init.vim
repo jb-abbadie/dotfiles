@@ -14,6 +14,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 " Language
 Plug 'towolf/vim-helm'
 Plug 'ray-x/go.nvim'
+Plug 'sheerun/vim-polyglot'
 
 " Finder
 Plug 'nvim-lua/popup.nvim'
@@ -43,6 +44,8 @@ Plug 'rcarriga/nvim-dap-ui'
 Plug 'neovim/nvim-lspconfig'
 Plug 'onsails/lspkind-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
 
 " ==============
