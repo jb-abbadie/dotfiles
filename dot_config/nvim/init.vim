@@ -136,8 +136,6 @@ set wrap                              " wrap lines
 " Python config
 " =============
 let g:python3_host_prog = '~/.pyenv/versions/pynvim/bin/python'
-let g:python_host_prog = '~/.pyenv/versions/py2_pynvim/bin/python'
-
 
 " Folds
 " =====
