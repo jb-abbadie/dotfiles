@@ -38,13 +38,14 @@ setopt noflowcontrol
 # Keychain
 eval `keychain --agents ssh --systemd --eval --quiet`
 
-# Zplug
-source /usr/share/zsh/scripts/zplug/init.zsh
-zplug romkatv/powerlevel10k, as:theme, depth:1
-zplug "pinelibg/dircolors-solarized-zsh"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug load
+# Antidote
+[[ -e ~/.antidote ]] || git clone https://github.com/mattmc3/antidote.git ~/.antidote
+
+# source antidote
+. ~/.antidote/antidote.zsh
+
+# generate and source plugins from ~/.zsh_plugins.txt
+antidote load
 
 # Pyenv
 source /usr/share/zsh/site-functions/_pyenv
