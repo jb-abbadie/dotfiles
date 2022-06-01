@@ -11,3 +11,5 @@ alias sp="steampipe"
 
 alias gdc="git diff --cached"
 
+alias watch="watch "
+alias viddy="viddy "
