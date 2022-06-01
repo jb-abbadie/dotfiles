@@ -2,6 +2,7 @@ export PATH="$HOME/bin:$PATH:$HOME/prog/go/bin:$HOME/.cargo/bin:$HOME/.terraform
 export GOPATH="$HOME/prog/go"
 export GO111MODULE=on
 export AWS_SDK_LOAD_CONFIG=1
+export AAD_LOGIN_METHOD=azurecli
 export EDITOR="nvim"
 export DOCKER_BUILDKIT=1
 export WORDCHARS=$WORDCHARS:s:/:
