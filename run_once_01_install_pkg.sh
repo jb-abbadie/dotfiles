@@ -10,6 +10,7 @@ sudo pacman -S --needed \
     hyperfine \
     jq \
     keychain \
+    kubectl \
     maim \
     ripgrep \
     slock \
