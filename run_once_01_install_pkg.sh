@@ -2,16 +2,18 @@
 sudo pacman -S --needed \
     alacritty \
     bat \
+    choose \
     dog \
     dunst \
-    fzf \
     fd \
-    jq \
+    fzf \
     hyperfine \
+    jq \
     keychain \
     maim \
-    tmux \
     ripgrep \
     slock \
+    tmux \
     xclip \
+    xss-lock \
     zsh
