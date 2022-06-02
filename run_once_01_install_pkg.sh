@@ -11,6 +11,7 @@ sudo pacman -S --needed \
     jq \
     keychain \
     kubectl \
+    kubie \
     maim \
     ripgrep \
     slock \
