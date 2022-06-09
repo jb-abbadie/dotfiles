@@ -60,6 +60,7 @@ window#waybar {
 #network{
 	color: #2aa198;
 	background: #1a1a1a;
+	padding: 0 10px;
 }
 #clock{
 	background: #1a1a1a;
