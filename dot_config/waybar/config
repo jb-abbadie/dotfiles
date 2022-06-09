@@ -76,7 +76,6 @@
 		"on-click-right": "pavucontrol"
 	},
 	"network": {
-		"interface": "wlp0s20f3",
 		"format-wifi": "{ipaddr} {essid} ({signalStrength}%) "
 	},
 	"cpu": {
