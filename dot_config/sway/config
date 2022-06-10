@@ -53,8 +53,8 @@ bindsym $mod+d exec kickoff
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 #
-bindsym XF86MonBrightnessDown exec brightnessctl set '$10%-'
-bindsym XF86MonBrightnessUp exec brightnessctl set '$10%+'
+bindsym XF86MonBrightnessDown exec brightnessctl set '10%-'
+bindsym XF86MonBrightnessUp exec brightnessctl set '10%+'
 
 #
 # Moving around:
