@@ -2,20 +2,27 @@
 sudo pacman -S --needed \
     alacritty \
     bat \
+    brightnessctl \
     choose \
     dog \
     dunst \
+    dunst \
     fd \
+    firefox \
     fzf \
     hyperfine \
+    imv \
     jq \
     keychain \
     kubectl \
     kubie \
-    maim \
+    pavucontrol \
+    ranger \
     ripgrep \
-    slock \
+    sway \
+    swayidle \
+    swaylock \
     tmux \
-    xclip \
-    xss-lock \
+    waybar \
+    waylock \
     zsh
