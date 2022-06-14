@@ -1,3 +1,4 @@
+!.ssh/config
 .Xauthority
 .ansible
 .ansible-console_history
@@ -93,17 +94,14 @@
 .rustup
 .screenlayout
 .sqlite_history
-.ssh/authorized_keys
-.ssh/id*
-.ssh/known_hosts
-.ssh/known_hosts.old
-.ssh/sockets
+.ssh
 .terraform.d
 .terraform.versions
 .thumbnails
 .tmux
 .tox
 .tree-sitter
+.vault-token
 .vim
 .viminfo
 .weechat
@@ -114,6 +112,7 @@
 .zcompdump
 .zdirs
 .zfunc
+.zoom
 .zplug
 .zsh_history
 .zsh_plugins.zsh
@@ -125,3 +124,4 @@ mail/
 mnt/
 narud/
 prog/
+project/
