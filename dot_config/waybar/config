@@ -1,5 +1,3 @@
-// -*- mode: json -*-
-
 {
 	"layer": "top",
 	"position": "bottom",
@@ -52,7 +50,6 @@
 	},
 
 	"sway/workspaces": {
-		"disable-scroll": true,
 		"format": "{name}"
 	},
 
@@ -76,6 +73,7 @@
 		"on-click-right": "pavucontrol"
 	},
 	"network": {
+		"interface": "wl*",
 		"format-wifi": "{ipaddr} {essid} ({signalStrength}%) "
 	},
 	"cpu": {
