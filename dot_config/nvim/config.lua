@@ -66,7 +66,7 @@ local on_attach = function(client, bufnr)
   end
 end
 
-local servers = { "gopls", "golangci_lint_ls", "rls", "terraformls", "pylsp" , "tsserver", "jsonnet_ls"}
+local servers = { "gopls", "golangci_lint_ls", "rls", "terraformls", "pyright" , "tsserver", "jsonnet_ls"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
