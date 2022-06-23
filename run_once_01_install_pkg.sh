@@ -6,7 +6,6 @@ sudo pacman -S --needed \
     choose \
     dog \
     dunst \
-    dunst \
     fd \
     firefox \
     fzf \
@@ -14,6 +13,7 @@ sudo pacman -S --needed \
     imv \
     jq \
     keychain \
+    kmscon \
     kubectl \
     kubie \
     pavucontrol \
