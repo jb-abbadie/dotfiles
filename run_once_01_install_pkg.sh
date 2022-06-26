@@ -2,6 +2,7 @@
 sudo pacman -S --needed \
     alacritty \
     bat \
+    bemenu \
     brightnessctl \
     choose \
     dog \
