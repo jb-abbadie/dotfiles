@@ -194,7 +194,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
+    icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/:/usr/share/icons/hicolor/scalable/status/:/usr/share/hicolor/scalable/devices/
 
     ### History ###
 
@@ -208,7 +208,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/bemenu -p dunst:
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/xdg-open
