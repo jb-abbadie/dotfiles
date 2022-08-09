@@ -29,13 +29,20 @@ setopt noflowcontrol
 eval `keychain --agents ssh --systemd --eval --quiet`
 
 # Antidote
-[[ -e ~/.antidote ]] || git clone https://github.com/mattmc3/antidote.git ~/.antidote
+zhome=${HOME}
+if [[ ! $zhome/.zsh_plugins.zsh -nt $zhome/.zsh_plugins.txt ]]; then
+  [[ -e $zhome/.antidote ]] \
+    || git clone --depth=1 https://github.com/mattmc3/antidote.git $zhome/.antidote
+  [[ -e $zhome/.zsh_plugins.txt ]] || touch $zhome/.zsh_plugins.txt
+  (
+    source $zhome/.antidote/antidote.zsh
+    antidote bundle <$zhome/.zsh_plugins.txt >$zhome/.zsh_plugins.zsh
+  )
+fi
 
-# source antidote
-. ~/.antidote/antidote.zsh
-
-# generate and source plugins from ~/.zsh_plugins.txt
-antidote load ~/.zsh_plugins.txt
+autoload -Uz $zhome/.antidote/functions/antidote
+source $zhome/.zsh_plugins.zsh
+unset zhome
 
 # Pyenv
 source /usr/share/zsh/site-functions/_pyenv
