@@ -6,6 +6,7 @@ alias vim=nvim
 
 alias docker="podman"
 alias k="kubectl"
+alias ks="kubectl --sort-by='.metadata.creationTimestamp'"
 alias t="terraform"
 alias sp="steampipe"
 
