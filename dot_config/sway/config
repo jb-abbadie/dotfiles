@@ -196,7 +196,7 @@ assign [app_id="pavucontrol"] $ws3
 
 for_window [app_id="mpv"] floating enable
 for_window [app_id="mpv"] border pixel 1
-for_window [name="Firefox — Sharing Indicator"] floating enable, sticky enable
+#for_window [name="Firefox — Sharing Indicator"] floating enable, sticky enable
 
 exec firefox
 exec slack
