@@ -1,4 +1,105 @@
 -- ==============
+-- General Config
+-- ==============
+vim.g.mapleader = ","
+
+vim.opt.timeout = false
+vim.opt.number = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.opt.clipboard = 'unnamedplus'
+
+local vimp = require('vimp')
+
+vimp.nnoremap('k', 'gk')
+vimp.nnoremap('j', 'gj')
+
+
+vimp.inoremap('<Up>', '<NOP>')
+vimp.inoremap('<Down>', '<NOP>')
+vimp.inoremap('<Left>', '<NOP>')
+vimp.inoremap('<Right>', '<NOP>')
+vimp.noremap('<Up>', '<NOP>')
+vimp.noremap('<Down>', '<NOP>')
+vimp.noremap('<Left>', '<NOP>')
+vimp.noremap('<Right>', '<NOP>')
+
+-- Appearance
+-- ==========
+
+vim.opt.termguicolors = true
+vim.cmd[[colorscheme solarized]]
+vim.g.rainbow_active = 1
+
+-- Leader commands
+-- ===============
+
+vimp.nmap('<leader>w', ':w!<cr>')
+vim.cmd[[map <leader>cd :cd %:p:h<cr>:pwd<cr>]]
+vimp.map({'silent'}, '<leader><cr>', ':noh<cr>')
+
+-- Search Settings
+-- ===============
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- Turn Off Swap Files
+-- ===================
+
+vim.opt.swapfile = false
+
+-- Indentation and Display
+-- =======================
+
+vim.opt.smartindent = true
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4
+vim.opt.expandtab = true
+vim.opt.list = true
+vim.opt.listchars = {trail = "·", tab = '  '}
+
+-- Python config
+-- =============
+
+vim.g.python3_host_prog = '~/.pyenv/versions/pynvim/bin/python'
+
+-- Folds
+-- =====
+
+vim.opt.foldmethod = "syntax" -- Fold based on indent
+vim.opt.foldnestmax = 3       -- Deepest fold is 3 levels
+vim.opt.foldenable = false    -- Don't fold by default
+
+-- Scrolling
+-- =========
+
+vim.opt.scrolloff = 10      -- Start scrolling when we're getting close to margins
+vim.opt.sidescrolloff = 15
+
+vim.cmd([[
+
+" Filetype
+" ========
+"
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd BufRead,BufNewFile *gotmpl set ft=helm
+
+" ==============
+" Plugin Options
+" ==============
+
+" Telescope
+" =========
+map <C-p> :Telescope find_files<CR>
+map <C-g> :Telescope live_grep<CR>
+nnoremap <leader>ff :Telescope grep_string<CR>
+
+]])
+
+-- ==============
 -- lualine config
 -- ==============
 require('lualine').setup{
@@ -38,7 +139,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+  vim.keymap.set('n', '<C-o>', vim.lsp.buf.signature_help, bufopts)
   vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
   vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
   vim.keymap.set('n', '<space>wl', function()
