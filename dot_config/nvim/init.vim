@@ -34,6 +34,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'ray-x/cmp-treesitter'
+Plug 'ray-x/lsp_signature.nvim'
 
 " Debug
 Plug 'mfussenegger/nvim-dap'
