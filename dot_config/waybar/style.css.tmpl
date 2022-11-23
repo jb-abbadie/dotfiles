@@ -1,5 +1,5 @@
 * {
-	font-size: 14px;
+	font-size: {{ if hasKey . "hidpi" }}20{{else}}14{{end}}px;
 	font-family: monospace;
 }
 
