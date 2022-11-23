@@ -1,3 +1,5 @@
+require('plugins')
+
 -- ==============
 -- General Config
 -- ==============
