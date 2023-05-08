@@ -190,21 +190,6 @@ cmp.setup({
         { name = 'path' },
         { name = 'treesitter' },
     },
-    formatting = {
-        format = function(entry, vim_item)
-            -- fancy icons and a name of kind
-            vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
-
-            -- set a name for each source
-            vim_item.menu = ({
-                buffer = "[Buffer]",
-                nvim_lsp = "[LSP]",
-                path = "[Path]",
-                treesitter = "[TS]",
-            })[entry.source.name]
-            return vim_item
-        end,
-    },
 })
 
 -- =================
