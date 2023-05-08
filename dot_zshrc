@@ -1,3 +1,14 @@
+# History
+setopt SHARE_HISTORY
+setopt HIST_VERIFY
+setopt HIST_IGNORE_SPACE
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_DUPS
+export HISTSIZE=1000000000
+export SAVEHIST=1000000000
+export HISTFILE=~/.zsh_history
+
 # Enable Powerlevel11k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -8,13 +19,15 @@ fi
 # Sourcing
 source ~/.zsh_alias
 source ~/.zsh_functions
-{{- if eq .chezmoi.hostname "work-laptop-jb" }}
 source ~/.zsh_functions_private
-{{- end }}
+fpath=( ~/.zfunc "${fpath[@]}" )
 
 bindkey -e
 
-export HISTFILE=~/.zhistory
+# Options
+setopt EXTENDED_GLOB
+setopt INTERACTIVE_COMMENTS
+setopt NO_CLOBBER
 
 # FZF
 source /usr/share/fzf/key-bindings.zsh
@@ -24,6 +37,7 @@ export FZF_ALT_C_COMMAND='fd --type d --max-depth 3'
 export FZF_CTRL_T_COMMAND='fd'
 bindkey '^S' fzf-cd-widget
 setopt noflowcontrol
+
 
 # Keychain
 eval `keychain --agents ssh --systemd --eval --quiet`
@@ -49,12 +63,6 @@ source /usr/share/zsh/site-functions/_pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Completion
-fpath=( ~/.zfunc "${fpath[@]}" )
-
-{{- if index . "reviewers" }}
-alias gpr="hub pull-request -r {{ .reviewers }}"
-{{ end }}
 autoload bashcompinit && bashcompinit
 complete -C '/usr/bin/aws_completer' aws
 

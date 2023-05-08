@@ -5,5 +5,4 @@ pinelibg/dircolors-solarized-zsh
 romkatv/powerlevel10k
 
 zimfw/input
-zimfw/environment
 zimfw/completion

@@ -16,9 +16,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 export DIRCOLORS_SOLARIZED_ZSH_THEME="ansi-dark"
 
-export HISTSIZE=200000
-export SAVEHIST=100000
-
 export MOZ_ENABLE_WAYLAND=1
 
 export KUBECTL_EXTERNAL_DIFF=delta
