@@ -25,6 +25,7 @@ fpath=( ~/.zfunc "${fpath[@]}" )
 bindkey -e
 
 # Options
+setopt AUTO_CD
 setopt EXTENDED_GLOB
 setopt INTERACTIVE_COMMENTS
 setopt NO_CLOBBER
