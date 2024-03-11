@@ -1,4 +1,4 @@
-export PATH="$HOME/bin:$PATH:$HOME/prog/go/bin:$HOME/.cargo/bin:$HOME/.terraform.versions:$HOME/.krew/bin:/usr/local/go/bin"
+export PATH="$HOME/bin:$PATH:$HOME/prog/go/bin:$HOME/.cargo/bin:$HOME/.terraform.versions:$HOME/.krew/bin:/usr/local/go/bin:$HOME/.tfenv/bin"
 export GOPATH="$HOME/prog/go"
 export AWS_SDK_LOAD_CONFIG=1
 export AAD_LOGIN_METHOD=azurecli
