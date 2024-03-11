@@ -9,7 +9,7 @@ alias k="kubectl"
 alias ks="kubectl --sort-by='.metadata.creationTimestamp'"
 alias t="terraform"
 alias sp="steampipe"
-alias aws-profile='eval $(aws-sso eval -p $(aws-sso list Profile --csv |fzf))'
+alias aws-profile='export AWS_PROFILE=$(aws configure list-profiles | fzf)'
 
 alias gdc="git diff --cached"
 
