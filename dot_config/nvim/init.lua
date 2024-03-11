@@ -89,18 +89,12 @@ vim.cmd([[
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *gotmpl set ft=helm
 
-" ==============
-" Plugin Options
-" ==============
-
-" Telescope
-" =========
-map <C-p> :Telescope find_files<CR>
-map <C-g> :Telescope live_grep<CR>
-nnoremap <leader>ff :Telescope grep_string<CR>
-
 ]])
 
+-- ==============
+-- Plugin Options
+-- ==============
+require('Comment').setup()
 
 -- ==============
 -- lualine config
@@ -134,6 +128,18 @@ lspconfig.jsonnet_ls.setup {}
 lspconfig.groovyls.setup {
     cmd = { "java", "-jar", "/home/jabbadie/tmp/groovy-language-server-all.jar"}
 }
+
+lspconfig.helm_ls.setup {
+ cmd = { 'helm-ls', 'serve' },
+  settings = {
+    ['helm-ls'] = {
+      yamlls = {
+        path = "yaml-language-server",
+      }
+    }
+  }
+}
+lspconfig.yamlls.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -174,14 +180,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
-
---local nvim_lsp = require('lspconfig')
-
---local servers = { "gopls", "golangci_lint_ls", "rls", "terraformls", "pyright" , "tsserver", "jsonnet_ls"}
---for _, lsp in ipairs(servers) do
-  --nvim_lsp[lsp].setup {}
---end
-
 -- =================
 -- nvim-cmp settings
 -- =================
@@ -209,20 +207,7 @@ cmp.setup({
     },
 })
 
--- =================
--- Treesitter config
--- =================
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = "all",
-    highlight = {
-        enable = true,
-    },
-    indent = {
-        enable = true
-    },
-}
-
-
+require('gitsigns').setup {}
 -- ======
 -- Golang
 -- ======

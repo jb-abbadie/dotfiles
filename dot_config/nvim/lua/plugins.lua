@@ -1,55 +1,116 @@
 -- =======
 -- Plugins
 -- =======
-vim.cmd [[packadd packer.nvim]]
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
 
-
-return require('packer').startup(function(use)
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
-
+require("lazy").setup({
     -- Theme
-    use 'ishan9299/nvim-solarized-lua'
-    use 'hoob3rt/lualine.nvim'
-    use 'kyazdani42/nvim-web-devicons'
+    'ishan9299/nvim-solarized-lua',
+    'hoob3rt/lualine.nvim',
+    'nvim-tree/nvim-web-devicons',
 
     -- Language
-    use 'towolf/vim-helm'
-    use 'ray-x/go.nvim'
-    use 'sheerun/vim-polyglot'
-    use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+    {
+        "ray-x/go.nvim",
+        dependencies = {  -- optional packages
+            "ray-x/guihua.lua",
+            "neovim/nvim-lspconfig",
+            "nvim-treesitter/nvim-treesitter",
+        },
+        config = function()
+            require("go").setup()
+        end,
+        event = {"CmdlineEnter"},
+        ft = {"go", 'gomod'},
+        build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+    },
 
     -- Finder
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
+    {'nvim-telescope/telescope.nvim',
+        keys = {
+            { "<C-p>", ":Telescope find_files<cr>", desc = "Open telescope file picker" },
+            {"<C-g>",  ":Telescope live_grep<CR>", desc = "Open telescope livegrep"},
+        },
+        dependencies = { 
+            'nvim-lua/plenary.nvim' ,
+            'nvim-telescope/telescope-ui-select.nvim',
+        }
+    },
 
     -- Misc
-    use 'tpope/vim-fugitive'
-    use 'airblade/vim-gitgutter'
-    use 'preservim/nerdcommenter'
-    use 'luochen1990/rainbow'
-    use 'aserowy/tmux.nvim'
-    use 'svermeulen/vimpeccable'
+    'lewis6991/gitsigns.nvim',
+    {'numToStr/Comment.nvim', lazy =false},
+    'aserowy/tmux.nvim',
+    'svermeulen/vimpeccable',
 
     -- Completion
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/vim-vsnip'
-    use 'ray-x/cmp-treesitter'
-    use 'ray-x/lsp_signature.nvim'
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/vim-vsnip',
+    'ray-x/cmp-treesitter',
+    'ray-x/lsp_signature.nvim',
 
     -- Debug
-    use 'mfussenegger/nvim-dap'
-    use 'rcarriga/nvim-dap-ui'
+    'mfussenegger/nvim-dap',
+    'rcarriga/nvim-dap-ui',
 
     -- LSP/treesitter
-    use 'neovim/nvim-lspconfig'
-    use 'onsails/lspkind-nvim'
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    'neovim/nvim-lspconfig',
+    'onsails/lspkind-nvim',
+    { 'nvim-treesitter/nvim-treesitter',
+        build = ':TSUpdate',
+        config = function ()
+            local configs = require("nvim-treesitter.configs")
+            configs.setup({
+                ensure_installed = "all",
+                highlight = {
+                    enable = true,
+                },
+                indent = {
+                    enable = true
+                },
+            })
+        end
+    },
 
+    -- LLM
+    {
+        "David-Kunz/gen.nvim",
+        opts = {
+            model = "deepseek-coder:6.7b", -- The default model to use.
+            host = "localhost", -- The host running the Ollama service.
+            port = "11434", -- The port on which the Ollama service is listening.
+            display_mode = "float", -- The display mode. Can be "float" or "split".
+            show_prompt = false, -- Shows the Prompt submitted to Ollama.
+            show_model = false, -- Displays which model you are using at the beginning of your chat session.
+            no_auto_close = false, -- Never closes the window automatically.
+            init = function(options) pcall(io.popen, "ollama serve > /dev/null 2>&1 &") end,
+            -- Function to initialize Ollama
+            command = function(options)
+                return "curl --silent --no-buffer -X POST http://" .. options.host .. ":" .. options.port .. "/api/chat -d $body"
+            end,
+            -- The command for the Ollama service. You can use placeholders $prompt, $model and $body (shellescaped).
+            -- This can also be a command string.
+            -- The executed command must return a JSON object with { response, context }
+            -- (context property is optional).
+            -- list_models = '<omitted lua function>', -- Retrieves a list of model names
+            debug = false -- Prints errors and the command which is run.
+        }
+    },
+})
 
-end)
 
 
