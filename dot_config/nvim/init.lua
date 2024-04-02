@@ -211,10 +211,14 @@ require('gitsigns').setup {}
 -- ======
 -- Golang
 -- ======
-require('go').setup()
-
-vim.api.nvim_exec([[ autocmd BufWritePre (InsertLeave?) <buffer> lua vim.lsp.buf.formatting_sync(nil,500) ]], false)
-vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
+local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+   require('go.format').gofmt()
+  end,
+  group = format_sync_grp,
+})
 
 
 -- =========
