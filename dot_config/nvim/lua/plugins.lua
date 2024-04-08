@@ -80,7 +80,7 @@ require("lazy").setup({
                     enable = true,
                 },
                 indent = {
-                    enable = false
+                    enable = true
                 },
             })
         end
