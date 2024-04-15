@@ -26,6 +26,9 @@
 		"battery",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
+		"mpris",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
 		"clock",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -102,5 +105,17 @@
 	},
 	"tray": {
 		"icon-size": 20
-	}
+	},
+  "mpris": {
+    "format": "{player_icon} {artist} - {title}",
+    "format-paused": "{status_icon} <i>{artist} - {title}</i>",
+    "player-icons": {
+      "default": "▶",
+      "spotify": "",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
+  }
 }
