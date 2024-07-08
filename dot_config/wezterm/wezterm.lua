@@ -5,7 +5,7 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
-config.font = wezterm.font('Monaspace Neon')
+config.font = wezterm.font('Monaspace Neon', { weight = 'DemiBold' })
 config.harfbuzz_features={ 'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'}
 config.underline_position = -2
 config.font_size = 9
@@ -14,11 +14,9 @@ config.font_size = 9
 config.color_scheme = 'Solarized (dark) (terminal.sexy)'
 
 config.automatically_reload_config = true
-
 config.tab_bar_at_bottom = true
 
-config.debug_key_events = true
-
+-- Tmux Binding
 config.leader={ key="a", mods="CTRL" }
 config.keys = {
     { key = "a", mods = "LEADER|CTRL",  action=wezterm.action{SendString="\x01"}},
