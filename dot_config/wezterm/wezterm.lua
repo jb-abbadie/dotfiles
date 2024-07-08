@@ -1,0 +1,57 @@
+-- Pull in the wezterm API
+local wezterm = require 'wezterm'
+
+-- This will hold the configuration.
+local config = wezterm.config_builder()
+
+-- This is where you actually apply your config choices
+config.font = wezterm.font('Monaspace Neon')
+config.harfbuzz_features={ 'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'}
+config.underline_position = -2
+config.font_size = 9
+
+-- For example, changing the color scheme:
+config.color_scheme = 'Solarized (dark) (terminal.sexy)'
+
+config.automatically_reload_config = true
+
+config.tab_bar_at_bottom = true
+
+config.debug_key_events = true
+
+config.leader={ key="a", mods="CTRL" }
+config.keys = {
+    { key = "a", mods = "LEADER|CTRL",  action=wezterm.action{SendString="\x01"}},
+    { key = "d", mods = "LEADER",       action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
+    { key = "\\",mods = "LEADER",       action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
+    { key = "-", mods = "LEADER",       action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
+    { key = "|", mods = "LEADER|SHIFT",       action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
+    { key = "o", mods = "LEADER",       action="TogglePaneZoomState" },
+    { key = "z", mods = "LEADER",       action="TogglePaneZoomState" },
+    { key = "c", mods = "LEADER",       action=wezterm.action{SpawnTab="CurrentPaneDomain"}},
+    { key = "h", mods = "CTRL",       action=wezterm.action{ActivatePaneDirection="Left"}},
+    { key = "j", mods = "CTRL",       action=wezterm.action{ActivatePaneDirection="Down"}},
+    { key = "k", mods = "CTRL",       action=wezterm.action{ActivatePaneDirection="Up"}},
+    { key = "l", mods = "CTRL",       action=wezterm.action{ActivatePaneDirection="Right"}},
+    { key = "H", mods = "LEADER|SHIFT", action=wezterm.action{AdjustPaneSize={"Left", 5}}},
+    { key = "J", mods = "LEADER|SHIFT", action=wezterm.action{AdjustPaneSize={"Down", 5}}},
+    { key = "K", mods = "LEADER|SHIFT", action=wezterm.action{AdjustPaneSize={"Up", 5}}},
+    { key = "L", mods = "LEADER|SHIFT", action=wezterm.action{AdjustPaneSize={"Right", 5}}},
+    { key = "1", mods = "LEADER",       action=wezterm.action{ActivateTab=0}},
+    { key = "2", mods = "LEADER",       action=wezterm.action{ActivateTab=1}},
+    { key = "3", mods = "LEADER",       action=wezterm.action{ActivateTab=2}},
+    { key = "4", mods = "LEADER",       action=wezterm.action{ActivateTab=3}},
+    { key = "5", mods = "LEADER",       action=wezterm.action{ActivateTab=4}},
+    { key = "6", mods = "LEADER",       action=wezterm.action{ActivateTab=5}},
+    { key = "7", mods = "LEADER",       action=wezterm.action{ActivateTab=6}},
+    { key = "8", mods = "LEADER",       action=wezterm.action{ActivateTab=7}},
+    { key = "9", mods = "LEADER",       action=wezterm.action{ActivateTab=8}},
+    { key = "p", mods = "LEADER",       action=wezterm.action{ActivateTabRelative=-1}},
+    { key = "n", mods = "LEADER",       action=wezterm.action{ActivateTabRelative=1}},
+    { key = "&", mods = "LEADER|SHIFT", action=wezterm.action{CloseCurrentTab={confirm=true}}},
+    { key = "d", mods = "LEADER",       action=wezterm.action{CloseCurrentPane={confirm=true}}},
+    { key = "x", mods = "LEADER",       action=wezterm.action{CloseCurrentPane={confirm=true}}},
+  }
+
+-- and finally, return the configuration to wezterm
+return config
