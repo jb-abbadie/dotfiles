@@ -5,7 +5,7 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
-config.font = wezterm.font('Monaspace Neon', { weight = 'DemiBold' })
+config.font = wezterm.font('Monaspace Neon')
 config.harfbuzz_features={ 'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'}
 config.underline_position = -2
 config.font_size = 9

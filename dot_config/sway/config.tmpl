@@ -18,7 +18,7 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty
+set $term wezterm
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -194,7 +194,7 @@ for_window [app_id="Zoom"] floating enable
 
 # For Slack
 assign [app_id="Electron"] $ws2
-assign [app_id="Alacritty"] $ws1
+assign [app_id="org.wezfurlong.wezterm"] $ws1
 assign [app_id="pavucontrol"] $ws3
 
 for_window [app_id="mpv"] floating enable
@@ -202,7 +202,7 @@ for_window [app_id="mpv"] border pixel 1
 for_window [title="Firefox — Sharing Indicator"] floating enable, sticky enable
 
 exec firefox
-exec alacritty
+exec wezterm
 exec pavucontrol
 exec virt-manager
 exec dunst
