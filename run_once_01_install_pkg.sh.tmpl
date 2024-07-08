@@ -1,7 +1,6 @@
 #!/bin/bash
 {{ if eq .chezmoi.osRelease.id "arch" }}
  sudo pacman -S --needed \
-     alacritty \
      bat \
      bemenu \
      brightnessctl \
@@ -26,5 +25,6 @@
      tmux \
      waybar \
      waylock \
+     wezterm \
      zsh
 {{ end }}
