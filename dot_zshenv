@@ -18,4 +18,6 @@ export DIRCOLORS_SOLARIZED_ZSH_THEME="ansi-dark"
 
 export MOZ_ENABLE_WAYLAND=1
 
+skip_global_compinit=1
+
 export KUBECTL_EXTERNAL_DIFF=delta
