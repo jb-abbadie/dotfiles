@@ -30,6 +30,7 @@
 .config/dlv
 .config/easytag
 .config/gconf
+.config/gh
 .config/glib-2.0
 .config/gocode
 .config/google-chrome
@@ -38,6 +39,7 @@
 .config/helm
 .config/htop
 .config/hub
+.config/kanshi
 .config/keepassxc
 .config/libreoffice
 .config/libvirt
@@ -46,6 +48,8 @@
 .config/mpd
 .config/mpv
 .config/nvim/.netrwhist
+.config/nvim/lazy-lock.json
+.config/nwg-displayss
 .config/pavucontrol.ini
 .config/pip
 .config/plowshare
@@ -56,9 +60,18 @@
 .config/ranger/history
 .config/ranger/rifle.conf
 .config/ranger/scope.sh
+.config/rclone
 .config/roccat
+.config/solaar
+.config/sops
+.config/spotify
 .config/subtitleeditor
+.config/sway/outputs
+.config/sway/workspaces
 .config/systemd
+.config/tailscale
+.config/torbrowser
+.config/wireplumber
 .dbus
 .docker
 .glide
@@ -82,6 +95,7 @@
 .npm
 .npmrc
 .nvm
+.ollama
 .packer.d
 .pkg-cache
 .pki
@@ -109,9 +123,12 @@
 .wireshark
 .xsession-errors
 .xsession-errors.old
+.zcompcache*
 .zcompdump
+.zcompdump*
 .zdirs
 .zfunc
+.zhistory
 .zoom
 .zplug
 .zsh_history
