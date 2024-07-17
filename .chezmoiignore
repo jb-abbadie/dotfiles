@@ -4,6 +4,7 @@
 .ansible-console_history
 .argocd
 .aws
+.aws-sso
 .bash_history
 .cache
 .cargo
