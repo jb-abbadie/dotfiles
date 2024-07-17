@@ -26,6 +26,15 @@ return {
     'stevearc/dressing.nvim',
     opts = {}
   },
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = { indent = {char="▏"}} },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {
+      indent = {
+        char="│",
+        tab_char="│",
+      },
+    },
+  },
   {'lewis6991/gitsigns.nvim', opts = {} },
 }
