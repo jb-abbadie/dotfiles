@@ -1,34 +1,36 @@
 #!/bin/bash
 {{ if eq .chezmoi.osRelease.id "arch" }}
- sudo pacman -S --needed \
-     bat \
-     bemenu \
-     brightnessctl \
-     choose \
-     dog \
-     dunst \
-     fd \
-     firefox \
-     fzf \
-     git-delta \
-     htop \
-     hyperfine \
-     imv \
-     jq \
-     keychain \
-     kubectl \
-     kubie \
-     lf \
-     pavucontrol \
-     ranger \
-     ripgrep \
-     sway \
-     swayidle \
-     swaylock \
-     tmux \
-     waybar \
-     waylock \
-     wezterm \
-     wl-clipboard \
-     zsh
+  sudo pacman -S --needed \
+    bat \
+    bemenu \
+    brightnessctl \
+    choose \
+    dog \
+    dunst \
+    fd \
+    firefox \
+    fzf \
+    git-delta \
+    helm \
+    helmfile \
+    htop \
+    hyperfine \
+    imv \
+    jq \
+    keychain \
+    kubectl \
+    kubie \
+    lf \
+    pavucontrol \
+    ranger \
+    ripgrep \
+    sway \
+    swayidle \
+    swaylock \
+    tmux \
+    waybar \
+    waylock \
+    wezterm \
+    wl-clipboard \
+    zsh
 {{ end }}
