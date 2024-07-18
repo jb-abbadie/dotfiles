@@ -22,6 +22,7 @@ vim.g.mapleader = ","
 vim.g.maplocalleader = "\\"
 vim.opt.timeout = false
 vim.opt.number = true
+vim.opt.clipboard = 'unnamedplus'
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.ignorecase = true
