@@ -1,0 +1,45 @@
+#!/bin/sh
+
+set -euf
+
+draw() {
+  chafa -f sixel -s "${width}x${height}" --animate off --polite on "$1"
+  exit 1
+}
+
+
+hash() {
+  cache="$HOME/.cache/lf/$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' -- "$(readlink -f -- "$1")" | sha256sum | cut -d' ' -f1).jpg"
+}
+
+cache() {
+  if ! [ -s "$cache" ]; then
+    dir="$(dirname -- "$cache")"
+    [ -d "$dir" ] || mkdir -p -- "$dir"
+    "$@"
+  fi
+}
+
+file="$1"
+width="$2"
+height="$3"
+x="$4"
+y="$5"
+
+
+case "$(file -Lb --mime-type -- "$file")" in
+  image/*)
+    chafa -f sixel -s "${width}x${height}" --animate off --polite on "$1"
+    exit 1
+    # draw $file
+    ;;
+  video/*)
+    hash "$file"
+    cache ffmpegthumbnailer -i "${file}" -c jpg -s 0 -f -o "$cache"
+    chafa -f sixel -s "${width}x${height}" --animate off --polite on "$cache"
+    exit 1
+    ;;
+  text/*)
+    cat "$1"
+    ;;
+esac
