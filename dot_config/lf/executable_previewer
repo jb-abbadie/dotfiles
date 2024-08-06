@@ -29,9 +29,8 @@ y="$5"
 
 case "$(file -Lb --mime-type -- "$file")" in
   image/*)
-    chafa -f sixel -s "${width}x${height}" --animate off --polite on "$1"
-    exit 1
-    # draw $file
+    chafa -f sixel -s "${width}x${height}" --animate off --polite on "${file}"
+    exit 0
     ;;
   video/*)
     hash "$file"
@@ -40,6 +39,7 @@ case "$(file -Lb --mime-type -- "$file")" in
     exit 1
     ;;
   text/*)
-    cat "$1"
+    bat --color always "$1"
+    exit 1
     ;;
 esac
