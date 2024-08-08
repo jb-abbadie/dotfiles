@@ -1,7 +1,10 @@
 [user]
     email = jb-abbadie@users.noreply.github.com
     name = jb-abbadie
-    signingkey = {{ .github_ssh_key }}
+    signingkey = ~/.ssh/id_github
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
 
 [gpg]
     format = ssh
@@ -11,7 +14,7 @@
     gpgsign = true
 
 [core]
-    excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
+    excludesfile = ~/.config/git/gitignore_global
 
 [pager]
     diff = delta
