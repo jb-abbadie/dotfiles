@@ -17,7 +17,6 @@ return {
       lspconfig.rls.setup {}
       lspconfig.terraformls.setup {}
       lspconfig.pyright.setup {}
-      lspconfig.tsserver.setup {}
       lspconfig.jsonnet_ls.setup {}
       lspconfig.groovyls.setup {
         cmd = { "java", "-jar", "/home/jabbadie/tmp/groovy-language-server-all.jar"}
