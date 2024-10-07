@@ -77,11 +77,11 @@
 	},
 	"network": {
 		"interface": "wl*",
-		"format-wifi": "{ipaddr} {essid} ({signalStrength}%) "
+		"format-wifi": "{ipaddr} {essid:.10} ({signalStrength}%) "
 	},
 	"cpu": {
 		"interval": 5,
-		"format": "Load {load}"
+		"format": "  {load}"
 	},
 	"battery": {
 		"states": {
