@@ -1,54 +1,60 @@
 [user]
-    email = jb-abbadie@users.noreply.github.com
-    name = jb-abbadie
-    signingkey = ~/.ssh/id_github
-
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+  email = jb-abbadie@users.noreply.github.com
+  name = jb-abbadie
+  signingkey = ~/.ssh/id_github
 
 [gpg]
-    format = ssh
+  format = ssh
 
 [commit]
-    verbose = true
-    gpgsign = true
+  verbose = true
+  gpgsign = true
 
 [core]
-    excludesfile = ~/.config/git/gitignore_global
+  excludesfile = ~/.config/git/gitignore_global
 
 [pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [delta]
-    features = line-numbers decorations
-    whitespace-error-style = 22 reverse
+  features = line-numbers decorations
+  whitespace-error-style = 22 reverse
 
 [delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
 
 [push]
-    default = simple
-    autoSetupRemote = true
+  default = simple
+  autoSetupRemote = true
 
 [filter "lfs"]
-    process = git-lfs filter-process
-    required = true
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
 
 [color]
-    ui = auto
+  ui = auto
 
 [alias]
-    lg = log  --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --decorate
+  lg = log  --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --decorate
 
 [pull]
-    ff = only
+  ff = only
+
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+[credential "https://github.com"]
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
