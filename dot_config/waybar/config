@@ -114,6 +114,7 @@
       "spotify": "",
       "mpv": "🎵"
     },
+    "ignored-players": ["firefox"],
     "status-icons": {
       "paused": "⏸"
     },
