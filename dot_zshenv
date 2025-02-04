@@ -8,6 +8,8 @@ export DOCKER_BUILDKIT=1
 export WORDCHARS=$WORDCHARS:s:/:
 
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+export TFENV_ROOT="$HOME/.tfenv"
+
 
 # Pyenv
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
