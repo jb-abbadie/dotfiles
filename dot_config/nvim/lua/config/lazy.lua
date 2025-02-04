@@ -36,6 +36,20 @@ vim.opt.expandtab = true
 vim.opt.list = true
 vim.opt.listchars = {trail = "·", tab = '  '}
 
+-- Filetype
+
+vim.filetype.add({
+  extension = {
+    gotmpl = 'gotmpl',
+  },
+  pattern = {
+    [".*/.*%.yaml.gotmpl"] = "helm",
+    [".*/templates/.*%.tpl"] = "helm",
+    [".*/templates/.*%.ya?ml"] = "helm",
+    ["helmfile.*%.ya?ml"] = "helm",
+  },
+})
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
