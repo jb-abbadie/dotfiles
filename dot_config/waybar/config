@@ -77,7 +77,7 @@
 	},
 	"network": {
 		"interface": "wl*",
-		"format-wifi": "{ipaddr} {essid:.10} ({signalStrength}%) "
+		"format-wifi": "{essid:.10} ({signalStrength}%) "
 	},
 	"cpu": {
 		"interval": 5,
