@@ -43,7 +43,7 @@ setopt noflowcontrol
 
 
 # Keychain
-eval `keychain --agents ssh --systemd --eval --quiet`
+eval `keychain --systemd --eval --quiet`
 
 # Antidote
 zhome=${HOME}
