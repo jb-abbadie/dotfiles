@@ -10,6 +10,8 @@ export WORDCHARS=$WORDCHARS:s:/:
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 export TFENV_ROOT="$HOME/.tfenv"
 
+# ripgrep
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 
 # Pyenv
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
