@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -72,6 +70,11 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
+
+        ["<A-h>"] = { function() require("smart-splits").resize_left() end, desc = "Resize left" },
+        ["<A-j>"] = { function() require("smart-splits").resize_down() end, desc = "Resize down" },
+        ["<A-k>"] = { function() require("smart-splits").resize_up() end, desc = "Resize up" },
+        ["<A-l>"] = { function() require("smart-splits").resize_right() end, desc = "Resize right" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
