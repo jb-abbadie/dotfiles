@@ -6,6 +6,7 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.colorscheme.solarized-osaka-nvim"},
+  { import = "astrocommunity.colorscheme.solarized-osaka-nvim" },
+  { import = "astrocommunity.recipes.ai" },
   -- import/override with your plugins folder
 }
