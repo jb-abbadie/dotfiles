@@ -66,10 +66,6 @@ autoload -Uz $zhome/.antidote/functions/antidote
 source $zhome/.zsh_plugins.zsh
 unset zhome
 
-# Pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 autoload bashcompinit && bashcompinit
 [ -f /usr/bin/aws_completer ] && complete -C '/usr/bin/aws_completer' aws
 [ -f /snap/aws-cli/current/bin/aws_completer ] && complete -C '/snap/aws-cli/current/bin/aws_completer' aws

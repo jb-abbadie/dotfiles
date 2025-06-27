@@ -14,11 +14,6 @@ export TFENV_ROOT="$HOME/.tfenv"
 # ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 
-# Pyenv
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
 export DIRCOLORS_SOLARIZED_ZSH_THEME="ansi-dark"
 
 export MOZ_ENABLE_WAYLAND=1
