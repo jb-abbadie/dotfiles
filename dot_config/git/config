@@ -3,6 +3,9 @@
   name = jb-abbadie
   signingkey = ~/.ssh/id_github
 
+[includeIf "hasconfig:remote.*.url:ssh://git@codeberg.org/**"]
+  path = ~/.config/git/codeberg
+
 [gpg]
   format = ssh
 
