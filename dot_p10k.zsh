@@ -36,7 +36,6 @@
     virtualenv
     dir
     kubecontext             # current kubernetes context (https://kubernetes.io/)
-    pyenv                   # python environment (https://github.com/pyenv/pyenv)
     terraform
     vcs
     # =========================[ Line #2 ]=========================
@@ -55,7 +54,6 @@
     background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
     asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
-    virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
     anaconda                # conda environment (https://conda.io/)
     goenv                   # go environment (https://github.com/syndbg/goenv)
     nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
