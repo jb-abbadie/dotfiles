@@ -89,5 +89,8 @@ return {
         -- ["<C-S>"] = false,
       },
     },
+    rooter = {
+      autochdir = true
+    },
   },
 }
