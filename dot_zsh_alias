@@ -5,6 +5,7 @@ alias l="ll"
 alias vim=nvim
 
 alias docker="podman"
+alias kubectl="kubecolor"
 alias k="kubectl"
 alias ks="kubectl --sort-by='.metadata.creationTimestamp'"
 alias t="terraform"
