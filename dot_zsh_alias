@@ -14,5 +14,5 @@ alias aws-profile='export AWS_PROFILE=$(aws configure list-profiles | fzf)'
 
 alias gdc="git diff --cached"
 
-alias watch="watch "
-alias viddy="viddy "
+alias watch="KUBECOLOR_FORCE_COLORS=truecolor watch "
+alias viddy="KUBECOLOR_FORCE_COLORS=truecolor viddy "
