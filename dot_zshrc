@@ -10,17 +10,6 @@ export HISTFILESIZE=1000000000
 export SAVEHIST=1000000000
 export HISTFILE=~/.zsh_history
 
-# Enable Powerlevel11k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-(( ${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"
-
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-(( ${+commands[direnv]} )) && emulate zsh -c "$(direnv hook zsh)"
-
 
 # Sourcing
 source ~/.zsh_alias
@@ -69,14 +58,6 @@ unset zhome
 autoload bashcompinit && bashcompinit
 [ -f /usr/bin/aws_completer ] && complete -C '/usr/bin/aws_completer' aws
 [ -f /snap/aws-cli/current/bin/aws_completer ] && complete -C '/snap/aws-cli/current/bin/aws_completer' aws
-
-# Nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Direnv
-eval "$(direnv hook zsh)"
 
 # mise
 eval "$(mise activate zsh)"
