@@ -14,8 +14,6 @@ export TFENV_ROOT="$HOME/.tfenv"
 # ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 
-export DIRCOLORS_SOLARIZED_ZSH_THEME="ansi-dark"
-
 export MOZ_ENABLE_WAYLAND=1
 
 skip_global_compinit=1
