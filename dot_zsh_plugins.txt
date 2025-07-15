@@ -1,8 +1,0 @@
-zsh-users/zsh-syntax-highlighting
-zsh-users/zsh-autosuggestions
-pinelibg/dircolors-solarized-zsh
-
-romkatv/powerlevel10k
-
-zimfw/input
-zimfw/completion

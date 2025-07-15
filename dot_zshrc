@@ -35,25 +35,14 @@ export FZF_CTRL_T_COMMAND='fd'
 bindkey '^S' fzf-cd-widget
 setopt noflowcontrol
 
-
 # Keychain
-eval `keychain --systemd --eval --quiet`
+eval "$(keychain --systemd --eval --quiet)"
 
-# Antidote
-zhome=${HOME}
-if [[ ! $zhome/.zsh_plugins.zsh -nt $zhome/.zsh_plugins.txt ]]; then
-  [[ -e $zhome/.antidote ]] \
-    || git clone --depth=1 https://github.com/mattmc3/antidote.git $zhome/.antidote
-  [[ -e $zhome/.zsh_plugins.txt ]] || touch $zhome/.zsh_plugins.txt
-  (
-    source $zhome/.antidote/antidote.zsh
-    antidote bundle <$zhome/.zsh_plugins.txt >$zhome/.zsh_plugins.zsh
-  )
-fi
+# Sheldon
+eval "$(sheldon source)"
 
-autoload -Uz $zhome/.antidote/functions/antidote
-source $zhome/.zsh_plugins.zsh
-unset zhome
+# mise
+eval "$(mise activate zsh)"
 
 autoload bashcompinit && bashcompinit
 [ -f /usr/bin/aws_completer ] && complete -C '/usr/bin/aws_completer' aws
@@ -61,9 +50,6 @@ autoload bashcompinit && bashcompinit
 
 # Make "kubecolor" borrow the same completion logic as "kubectl"
 compdef kubecolor=kubectl
-
-# mise
-eval "$(mise activate zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
