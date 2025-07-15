@@ -5,14 +5,24 @@
 .argocd
 .aws
 .aws-sso
+.azure
 .bash_history
+.bash_logout
+.bash_profile
+.bashrc
+.bundle
 .cache
 .cargo
+.config/.jira
 .config/Bitwarden
 .config/Bitwarden CLI
+.config/Code
+.config/Code - OSS
 .config/Debauchee
 .config/GIMP
+.config/Insomnia
 .config/PureRef.ini
+.config/QtProject.conf
 .config/Signal
 .config/Slack
 .config/VIA
