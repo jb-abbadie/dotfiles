@@ -58,7 +58,10 @@
 .config/mimeapps.list
 .config/mpd
 .config/mpv
+.config/nvim/.neoconf.json
 .config/nvim/.netrwhist
+.config/nvim/.stylua.toml
+.config/nvim/README.md
 .config/nvim/lazy-lock.json
 .config/nwg-displayss
 .config/pavucontrol.ini
