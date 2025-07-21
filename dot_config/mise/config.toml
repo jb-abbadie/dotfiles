@@ -1,2 +1,3 @@
 [tools]
-"ubi:kubecolor/kubecolor" = "0.5.1"
+"aqua:kubecolor/kubecolor" = "0.5.1"
+watchexec = "2.3.2"
