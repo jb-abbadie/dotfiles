@@ -1,6 +1,6 @@
 return {
   "cappyzawa/trim.nvim",
   opts = {
-    highlight = true,
+    ft_blocklist = { "snacks_dashboard" },
   },
 }
