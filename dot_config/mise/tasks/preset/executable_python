@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#MISE dir="{{cwd}}"
+
+mise use python@3.13 --pin
+mise use ruff --pin
+mise use uv --pin
+mise config set env._.python.venv.path .venv
+mise config set env._.python.venv.create true -t bool
