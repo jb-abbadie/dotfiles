@@ -71,6 +71,7 @@
 .config/libvirt
 .config/mcomix
 .config/mimeapps.list
+.config/mise/conf.d/priv.toml
 .config/mpd
 .config/mpv
 .config/nvim/.neoconf.json
