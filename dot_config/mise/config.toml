@@ -3,3 +3,6 @@
 "cargo:stu" = "latest"
 slsa-verifier = "latest"
 watchexec = "2.3.2"
+
+[settings]
+idiomatic_version_file_enable_tools = []
