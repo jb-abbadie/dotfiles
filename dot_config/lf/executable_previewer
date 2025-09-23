@@ -42,4 +42,10 @@ case "$(file -Lb --mime-type -- "$file")" in
     bat --color always "$1"
     exit 1
     ;;
+  application/pdf)
+    hash "$file"
+	  gs -o "$cache" -sDEVICE=pngalpha -dLastPage=1 "$file" >/dev/null
+    chafa -f sixel -s "${width}x${height}" --animate off --polite on "$cache"
+	  exit 1
+	  ;;
 esac
