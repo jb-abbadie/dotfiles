@@ -1,4 +1,5 @@
 #!/bin/bash
+{{ if eq .chezmoi.os "linux" }}
 {{ if eq .chezmoi.osRelease.id "arch" }}
   sudo pacman -S --needed \
     bat \
@@ -47,4 +48,5 @@
     wezterm \
     wl-clipboard \
     zsh
+{{ end }}
 {{ end }}
