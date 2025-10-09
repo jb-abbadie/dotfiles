@@ -40,8 +40,7 @@ eval "$(sheldon source)"
 eval "$(mise activate zsh)"
 
 autoload bashcompinit && bashcompinit
-[ -f /usr/bin/aws_completer ] && complete -C '/usr/bin/aws_completer' aws
-[ -f /snap/aws-cli/current/bin/aws_completer ] && complete -C '/snap/aws-cli/current/bin/aws_completer' aws
+complete -C "$(which aws_completer)" aws
 
 # Make "kubecolor" borrow the same completion logic as "kubectl"
 compdef kubecolor=kubectl
