@@ -1,4 +1,4 @@
-tw() {
+tw () {
     unset TF_WORKSPACE
     export TF_WORKSPACE=$(terraform workspace list |cut -c3- |fzf)
 }
@@ -13,12 +13,35 @@ clean_tf_ws () {
     for ws in $(t workspace list| cut -c3- |grep -v default); do TF_WORKSPACE=default t workspace delete $ws;done
 }
 
-create_tf_ws() {
+create_tf_ws () {
     for ws in $(fd tfvars |cut -d. -f1| awk '{split($0, a, "/"); print a[2] "_" a[4] "_" a[3]}'); do
         t workspace new $ws
     done
 }
 
-gcm() {
+gcm () {
     git checkout $(git symbolic-ref refs/remotes/origin/HEAD |choose -f '/' -1)
+}
+
+skim-cd-widget() {
+  local cmd="command fd --type d --max-depth 3"
+  setopt localoptions pipefail no_aliases 2> /dev/null
+
+  local dir="$(eval "$cmd" | sk --no-multi)"
+  if [[ -z "$dir" ]]; then
+    zle redisplay
+    return 0
+  fi
+  if [ -z "$BUFFER" ]; then
+    BUFFER="cd ${(q)dir}"
+    zle accept-line
+  else
+    print -sr "cd ${(q)dir}"
+    cd "$dir"
+  fi
+  local ret=$?
+  unset dir # ensure this doesn't end up appearing in prompt expansion
+  zle skim-redraw-prompt
+  tput cnorm
+  return $ret
 }

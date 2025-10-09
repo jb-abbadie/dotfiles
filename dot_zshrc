@@ -25,18 +25,13 @@ setopt EXTENDED_GLOB
 setopt INTERACTIVE_COMMENTS
 setopt NO_CLOBBER
 
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
-export FZF_TMUX=0
-export FZF_ALT_C_COMMAND='fd --type d --max-depth 3'
-export FZF_CTRL_T_COMMAND='fd'
-bindkey '^S' fzf-cd-widget
+# Skim
+zle -N skim-cd-widget
+bindkey '^S' skim-cd-widget
 setopt noflowcontrol
 
 # Keychain
-eval "$(keychain --systemd --eval --quiet)"
+eval "$(keychain --eval --quiet)"
 
 # Sheldon
 eval "$(sheldon source)"
