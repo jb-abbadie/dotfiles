@@ -6,11 +6,8 @@ local nvim = require("nvim")
 local config = wezterm.config_builder()
 
 -- Display
-config.font = wezterm.font("Monaspace Neon")
-
 config.harfbuzz_features = { "calt", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "liga" }
 config.underline_position = -2
-config.font_size = {{ if hasKey . "hidpi" }}16{{else}}11{{end}}
 config.color_scheme = "Solarized (dark) (terminal.sexy)"
 
 config.tab_bar_at_bottom = true
