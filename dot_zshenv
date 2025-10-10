@@ -1,14 +1,11 @@
 export PATH="$HOME/bin:$PATH:$HOME/prog/go/bin:$HOME/.cargo/bin:$HOME/.terraform.versions:$HOME/.krew/bin:/usr/local/go/bin:$HOME/.tfenv/bin:$GEM_HOME/bin"
 export GOPATH="$HOME/prog/go"
 export AWS_SDK_LOAD_CONFIG=1
-export AAD_LOGIN_METHOD=azurecli
 export EDITOR="nvim"
-export BROWSER="firefox"
 export DOCKER_BUILDKIT=1
 export WORDCHARS=$WORDCHARS:s:/:
 
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
-export TFENV_ROOT="$HOME/.tfenv"
 
 # ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
