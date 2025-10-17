@@ -23,6 +23,11 @@ gcm () {
     git checkout $(git symbolic-ref refs/remotes/origin/HEAD |choose -f '/' -1)
 }
 
+__skimcmd() {
+  [ -n "$TMUX_PANE" ] && { [ "${SKIM_TMUX:-0}" != 0 ] || [ -n "$SKIM_TMUX_OPTS" ]; } &&
+    echo "sk --tmux=${SKIM_TMUX_OPTS:-center,${SKIM_TMUX_HEIGHT:-40%}}" || echo "sk"
+}
+
 skim-cd-widget() {
   local cmd="command fd --type d --max-depth 3"
   setopt localoptions pipefail no_aliases 2> /dev/null
@@ -42,6 +47,41 @@ skim-cd-widget() {
   local ret=$?
   unset dir # ensure this doesn't end up appearing in prompt expansion
   zle skim-redraw-prompt
+  tput cnorm
+  return $ret
+}
+
+
+
+# CTRL-R - Paste the selected command from history into the command line
+skim-history-widget() {
+  local selected num
+  setopt localoptions noglobsubst noposixbuiltins pipefail no_aliases 2> /dev/null
+  local awk_filter='{ cmd=$0; sub(/^[ \t]*[0-9]+\**[ \t]+/, "", cmd); if (!seen[cmd]++) print $0 }'  # filter out duplicates
+  local n=2 fc_opts=''
+  if [[ -o extended_history ]]; then
+    local today=$(date +%Y-%m-%d)
+    # For today's commands, replace date ($2) with "today", otherwise remove time ($3).
+    # And filter out duplicates.
+    awk_filter='{
+      if ($2 == "'$today'") sub($2 " ", "today'\''")
+      else sub($3, "")
+      line=$0; $1=""; $2=""; $3=""
+      if (!seen[$0]++) print line
+    }'
+    fc_opts='-i'
+    n=3
+  fi
+  selected=( $(fc -rl $fc_opts 1 | awk "$awk_filter" |
+    SKIM_DEFAULT_OPTIONS="$SKIM_DEFAULT_OPTIONS -n$n..,.. --bind=ctrl-r:toggle-sort $SKIM_CTRL_R_OPTS --query=${(qqq)LBUFFER} --no-multi" $(__skimcmd)) )
+  local ret=$?
+  if [ -n "$selected" ]; then
+    num=$selected[1]
+    if [ -n "$num" ]; then
+      zle vi-fetch-history -n $num
+    fi
+  fi
+  zle reset-prompt
   tput cnorm
   return $ret
 }
