@@ -26,6 +26,8 @@ setopt INTERACTIVE_COMMENTS
 setopt NO_CLOBBER
 
 # Skim
+zle     -N   skim-history-widget
+bindkey '^R' skim-history-widget
 zle -N skim-cd-widget
 bindkey '^S' skim-cd-widget
 setopt noflowcontrol
