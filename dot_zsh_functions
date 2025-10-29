@@ -4,7 +4,7 @@ tw () {
 }
 
 update_pacman_mirrors () {
-    sudo reflector --verbose --latest 5 --protocol https --sort rate --age 12 --save /etc/pacman.d/mirrorlist
+    sudo reflector --verbose --latest 20 --protocol https --sort rate --age 12 --save /etc/pacman.d/mirrorlist
 }
 
 clean_tf_ws () {
