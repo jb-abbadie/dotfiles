@@ -29,6 +29,7 @@ __skimcmd() {
 }
 
 skim-cd-widget() {
+  cd ~/work
   local cmd="command fd --type d --max-depth 3"
   setopt localoptions pipefail no_aliases 2> /dev/null
 
