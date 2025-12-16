@@ -4,6 +4,7 @@ kubecolor = "0.5.3"
 slsa-verifier = "latest"
 watchexec = "2.3.2"
 "ubi:sst/opencode" = "1.0.155"
+terraform = "1.14.2"
 
 [settings]
 idiomatic_version_file_enable_tools = []
