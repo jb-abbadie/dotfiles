@@ -86,3 +86,9 @@ skim-history-widget() {
   tput cnorm
   return $ret
 }
+
+argo-hard-refresh () {
+  local app
+  app=$(kubectl get applications -n argocd -o name | cut -d/ -f2 | sk --no-multi)
+  [[ -n "$app" ]] && kubectl annotate -n argocd app "$app" argocd.argoproj.io/refresh=hard --overwrite
+}
