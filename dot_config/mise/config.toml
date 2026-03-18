@@ -2,9 +2,9 @@
 kubecolor = "0.5.3"
 "cargo:stu" = "latest"
 slsa-verifier = "latest"
-watchexec = "2.3.2"
-terraform = "1.14.3"
-"github:anomalyco/opencode" = "1.1.4"
+watchexec = "2.5.0"
+terraform = "1.14.7"
+"github:anomalyco/opencode" = "1.2.27"
 
 [settings]
 idiomatic_version_file_enable_tools = []
