@@ -9,7 +9,15 @@ draw() {
 
 
 hash() {
-  cache="$HOME/.cache/lf/$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' -- "$(readlink -f -- "$1")" | sha256sum | cut -d' ' -f1).jpg"
+  if [ "$(uname)" = "Darwin" ]; then
+    # macOS: use -f for format, different specifiers, and resolve symlinks manually
+    resolved="$1"
+    [ -L "$1" ] && resolved="$(cd "$(dirname "$1")" && pwd -P)/$(basename "$1")"
+    cache="$HOME/.cache/lf/$(stat -f '%N%i%T%z%B%m' -- "$resolved" | shasum -a 256 | cut -d' ' -f1).jpg"
+  else
+    # Linux: use GNU stat
+    cache="$HOME/.cache/lf/$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' -- "$(readlink -f -- "$1")" | sha256sum | cut -d' ' -f1).jpg"
+  fi
 }
 
 cache() {
