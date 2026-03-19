@@ -58,8 +58,8 @@
 [url "ssh://git@codeberg.org/"]
   insteadOf = https://codeberg.org/
 [credential "https://github.com"]
-  helper = 
-  helper = !/usr/bin/gh auth git-credential
+  helper =
+  helper = !/usr/bin/env gh auth git-credential
 [credential "https://gist.github.com"]
-  helper = 
-  helper = !/usr/bin/gh auth git-credential
+  helper =
+  helper = !/usr/bin/env gh auth git-credential
