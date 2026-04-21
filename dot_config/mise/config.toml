@@ -3,8 +3,8 @@ kubecolor = "0.6.0"
 "cargo:stu" = "latest"
 slsa-verifier = "latest"
 watchexec = "2.5.1"
-terraform = "1.14.8"
-opencode = "1.4.6"
+terraform = "1.14.9"
+opencode = "1.14.19"
 
 [settings]
 idiomatic_version_file_enable_tools = []
