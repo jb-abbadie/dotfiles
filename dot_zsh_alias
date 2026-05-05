@@ -8,7 +8,6 @@ alias kubectl="kubecolor"
 alias k="kubectl"
 alias ks="kubectl --sort-by='.metadata.creationTimestamp'"
 alias t="terraform"
-alias sp="steampipe"
 alias aws-profile='export AWS_PROFILE=$(aws configure list-profiles | fzf)'
 
 alias gdc="git diff --cached"
