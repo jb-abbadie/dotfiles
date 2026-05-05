@@ -68,5 +68,6 @@ map <delete> delete
 
 map gm cd /media
 
+set preload
 set previewer ~/.config/lf/previewer
 set cleaner ~/.config/lf/cleaner

@@ -7,9 +7,11 @@ width="$2"
 height="$3"
 x="$4"
 y="$5"
+mode="${6:-preview}"
 
 draw() {
-  kitten icat --silent --stdin no --transfer-mode file \
+  [ "$mode" = "preload" ] && exit 1
+  kitten icat --silent --stdin no --transfer-mode file --scale-up \
     --place "${width}x${height}@${x}x${y}" "$1" < /dev/null > /dev/tty
   exit 1
 }
@@ -32,22 +34,43 @@ cache() {
   fi
 }
 
+preview_image() {
+  hash "$file"
+  cache magick "$file"[0] -auto-orient -thumbnail 1280x1280\> "$cache"
+  draw "$cache"
+}
+
+preview_video() {
+  hash "$file"
+  cache ffmpegthumbnailer -i "$file" -c jpg -s 1280 -f -o "$cache"
+  draw "$cache"
+}
+
+preview_pdf() {
+  hash "$file"
+  cache gs -o "$cache" -sDEVICE=pngalpha -dLastPage=1 "$file" >/dev/null
+  draw "$cache"
+}
+
+preview_text() {
+  bat --color always "$file"
+  exit 1
+}
+
+# Fast path: dispatch by extension to avoid spawning `file`.
+ext="${file##*.}"
+case "$(printf %s "$ext" | tr '[:upper:]' '[:lower:]')" in
+  jpg|jpeg|png|gif|webp|bmp|tiff|tif|avif|heic|heif|jxl|svg|ico) preview_image ;;
+  mp4|mkv|mov|avi|webm|wmv|flv|m4v|mpg|mpeg|ts|3gp|rmvb|m2p) preview_video ;;
+  pdf) preview_pdf ;;
+  txt|md|json|yaml|yml|toml|ini|conf|sh|py|rs|go|js|ts|tsx|jsx|c|cpp|h|hpp|rb|java|lua|vim|html|css|xml|log)
+    preview_text ;;
+esac
+
+# Fallback: use `file` for unknown extensions.
 case "$(file -Lb --mime-type -- "$file")" in
-  image/*)
-    draw "$file"
-    ;;
-  video/*)
-    hash "$file"
-    cache ffmpegthumbnailer -i "$file" -c jpg -s 0 -f -o "$cache"
-    draw "$cache"
-    ;;
-  text/*)
-    bat --color always "$file"
-    exit 1
-    ;;
-  application/pdf)
-    hash "$file"
-    cache gs -o "$cache" -sDEVICE=pngalpha -dLastPage=1 "$file" >/dev/null
-    draw "$cache"
-    ;;
+  image/*) preview_image ;;
+  video/*) preview_video ;;
+  application/pdf) preview_pdf ;;
+  text/*) preview_text ;;
 esac
