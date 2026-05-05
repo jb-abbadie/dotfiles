@@ -18,7 +18,7 @@ set $down j
 set $up k
 set $right l
 
-set $term wezterm
+set $term kitty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -33,8 +33,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec $term
-bindsym $mod+q exec $term -e bash
-bindsym $mod+e exec $term cli spawn lf
+bindsym $mod+q exec $term bash
+bindsym $mod+e exec sh -c 'kitty @ --to "unix:$(ls -1 /tmp/mykitty-* 2>/dev/null | head -1)" launch --type=tab lf'
 
 bindsym $mod+t exec grimshot copy area
 
@@ -199,7 +199,7 @@ for_window [class="steam_app*"] inhibit_idle focus
 
 # For Slack
 assign [app_id="Electron"] $ws2
-assign [app_id="org.wezfurlong.wezterm"] $ws1
+assign [app_id="kitty"] $ws1
 assign [app_id="pavucontrol"] $ws3
 assign [app_id="virt-manager"] $ws3
 
@@ -208,7 +208,7 @@ for_window [app_id="mpv"] border pixel 1
 for_window [title="Firefox — Sharing Indicator"] floating enable, sticky enable
 
 exec firefox
-exec wezterm
+exec kitty
 exec pavucontrol
 exec virt-manager
 exec dunst
