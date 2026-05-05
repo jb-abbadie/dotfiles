@@ -68,5 +68,5 @@ map <delete> delete
 
 map gm cd /media
 
-set sixel
 set previewer ~/.config/lf/previewer
+set cleaner ~/.config/lf/cleaner
