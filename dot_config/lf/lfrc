@@ -68,6 +68,33 @@ map <delete> delete
 
 map gm cd /media
 
+# extract archive with 7z
+# if it has a single top-level entry, extract in place;
+# otherwise extract into a folder named after the archive
+cmd extract ${{
+    set -f
+    archive="$f"
+    base=$(basename -- "$archive")
+    case "$base" in
+        *.tar.gz|*.tar.bz2|*.tar.xz|*.tar.zst|*.tar.lz|*.tar.lzma|*.tar.lz4)
+            name="${base%.tar.*}";;
+        *.*) name="${base%.*}";;
+        *)   name="${base}_extracted";;
+    esac
+
+    tops=$(7z l -slt -- "$archive" | sed -n '/^----------$/,$p' \
+        | awk -F' = ' '/^Path = / {print $2}' \
+        | awk -F/ 'NF>0 {print $1}' | sort -u)
+    count=$(printf '%s\n' "$tops" | grep -c .)
+
+    if [ "$count" = 1 ]; then
+        7z x -- "$archive"
+    else
+        7z x -o"$name" -- "$archive"
+    fi
+}}
+map E extract
+
 set preload
 set previewer ~/.config/lf/previewer
 set cleaner ~/.config/lf/cleaner
