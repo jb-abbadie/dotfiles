@@ -86,12 +86,6 @@
 .config/pipewire
 .config/plowshare
 .config/pulse
-.config/ranger/bookmarks
-.config/ranger/commands.py
-.config/ranger/commands_full.py
-.config/ranger/history
-.config/ranger/rifle.conf
-.config/ranger/scope.sh
 .config/rclone
 .config/roccat
 .config/shikane
@@ -131,7 +125,6 @@
 .local
 .m2
 .mariadb_history
-.memestra
 .minikube
 .mizu
 .mozilla
@@ -155,12 +148,10 @@
 .screenlayout
 .sqlite_history
 .ssh
-.steampipe
 .swt
 .talos
 .terraform.d
 .terraform.versions
-.tfenv
 .thumbnails
 .tmux
 .tox
