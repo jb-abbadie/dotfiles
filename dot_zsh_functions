@@ -92,3 +92,19 @@ argo-hard-refresh () {
   app=$(kubectl get applications -n argocd -o name | cut -d/ -f2 | sk --no-multi)
   [[ -n "$app" ]] && kubectl annotate -n argocd app "$app" argocd.argoproj.io/refresh=hard --overwrite
 }
+
+# Oh My Posh: expose the git-relative path so the path segment can show
+# "<repo>/<subdir>" instead of "<home>/.../repo/subdir" when inside a repo.
+_omp_git_rel_path () {
+  local root
+  if root=$(command git rev-parse --show-toplevel 2>/dev/null); then
+    local rel="${PWD#$root}"
+    export OMP_GIT_REL_PATH="${root:t}${rel}"
+  else
+    unset OMP_GIT_REL_PATH
+  fi
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook chpwd _omp_git_rel_path
+_omp_git_rel_path
