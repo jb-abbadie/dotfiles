@@ -126,7 +126,7 @@ leading_diamond = ""
 trailing_diamond = ""
 foreground = "#11111b"
 background = "#74c7ec"
-template = " ﴱ {{ .Context }}{{ if .Namespace }} :: {{ .Namespace }}{{ end }} "
+template = " \U000F10FE {{ .Context }}{{ if .Namespace }} :: {{ .Namespace }}{{ end }} "
 
 [[tooltips]]
 type = "aws"
@@ -146,7 +146,7 @@ leading_diamond = ""
 trailing_diamond = ""
 foreground = "#11111b"
 background = "#89b4fa"
-template = " ﴃ {{ .Name }} "
+template = " \U000F0805 {{ .Name }} "
 
 [[tooltips]]
 type = "gcp"
