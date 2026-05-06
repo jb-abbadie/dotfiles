@@ -1,0 +1,169 @@
+# Catppuccin Mocha palette
+# rosewater  #f5e0dc   flamingo   #f2cdcd   pink     #f5c2e7   mauve     #cba6f7
+# red        #f38ba8   maroon     #eba0ac   peach    #fab387   yellow    #f9e2af
+# green      #a6e3a1   teal       #94e2d5   sky      #89dceb   sapphire  #74c7ec
+# blue       #89b4fa   lavender   #b4befe
+# text       #cdd6f4   subtext1   #bac2de   subtext0 #a6adc8
+# overlay2   #9399b2   overlay1   #7f849c   overlay0 #6c7086
+# surface2   #585b70   surface1   #45475a   surface0 #313244
+# base       #1e1e2e   mantle     #181825   crust    #11111b
+
+version = 3
+final_space = true
+tooltips_action = "extend"
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "#7f849c"
+  template = "╭─"
+
+  [[blocks.segments]]
+  type = "python"
+  style = "powerline"
+  powerline_symbol = ""
+  foreground = "#11111b"
+  background = "#cba6f7"
+  template = "  {{ if .Venv }}{{ .Venv }}{{ end }} "
+
+  [[blocks.segments]]
+  type = "path"
+  style = "powerline"
+  powerline_symbol = ""
+  foreground = "#11111b"
+  background = "#89b4fa"
+  template = "  {{ if .Env.OMP_GIT_REL_PATH }}{{ .Env.OMP_GIT_REL_PATH }}{{ else }}{{ .Path }}{{ end }} "
+
+    [blocks.segments.properties]
+    style = "agnoster_short"
+    max_depth = 3
+    folder_separator_icon = "/"
+
+  [[blocks.segments]]
+  type = "terraform"
+  style = "powerline"
+  powerline_symbol = ""
+  foreground = "#11111b"
+  background = "#b4befe"
+  template = "{{ if glob \"*.tf\" }} \U000F1062 {{ .WorkspaceName }} {{ end }}"
+
+  [[blocks.segments]]
+  type = "git"
+  style = "powerline"
+  powerline_symbol = ""
+  foreground = "#11111b"
+  background = "#a6e3a1"
+  background_templates = [
+    "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f5c2e7{{ end }}",
+    "{{ if gt .Behind 0 }}#f38ba8{{ end }}",
+    "{{ if gt .Ahead 0 }}#89dceb{{ end }}",
+    "{{ if or (.Working.Changed) (.Staging.Changed) }}#fab387{{ end }}",
+  ]
+  template = " {{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
+
+    [blocks.segments.properties]
+    fetch_status = true
+    fetch_upstream_icon = true
+    branch_icon = " "
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  background = "transparent"
+  foreground = "#89b4fa"
+  template = "{{ if and (not (.Segments.Contains \"Git\")) (not (.Segments.Contains \"Terraform\")) }}{{ end }}"
+
+[[blocks]]
+type = "prompt"
+alignment = "right"
+
+  [[blocks.segments]]
+  type = "status"
+  style = "plain"
+  foreground = "#a6e3a1"
+  foreground_templates = ["{{ if gt .Code 0 }}#f38ba8{{ end }}"]
+  template = "{{ if gt .Code 0 }}  {{ .Code }}{{ else }} ✔{{ end }} "
+
+    [blocks.segments.properties]
+    always_enabled = true
+
+  [[blocks.segments]]
+  type = "executiontime"
+  style = "plain"
+  foreground = "#9399b2"
+  template = "  {{ .FormattedMs }}"
+
+    [blocks.segments.properties]
+    threshold = 500
+    style = "round"
+
+  [[blocks.segments]]
+  type = "time"
+  style = "plain"
+  foreground = "#a6adc8"
+  template = "  {{ .CurrentDate | date \"15:04:05\" }}"
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "#7f849c"
+  template = "╰─"
+
+[[tooltips]]
+type = "kubectl"
+tips = ["kubectl", "k", "helm", "kubie", "kubens", "kubectx", "cilium", "stern", "oc", "istioctl", "kogito", "kubecolor"]
+style = "diamond"
+leading_diamond = ""
+trailing_diamond = ""
+foreground = "#11111b"
+background = "#74c7ec"
+template = " ﴱ {{ .Context }}{{ if .Namespace }} :: {{ .Namespace }}{{ end }} "
+
+[[tooltips]]
+type = "aws"
+tips = ["aws", "awless"]
+style = "diamond"
+leading_diamond = ""
+trailing_diamond = ""
+foreground = "#11111b"
+background = "#fab387"
+template = "  {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} "
+
+[[tooltips]]
+type = "az"
+tips = ["az"]
+style = "diamond"
+leading_diamond = ""
+trailing_diamond = ""
+foreground = "#11111b"
+background = "#89b4fa"
+template = " ﴃ {{ .Name }} "
+
+[[tooltips]]
+type = "gcp"
+tips = ["gcloud", "gcs"]
+style = "diamond"
+leading_diamond = ""
+trailing_diamond = ""
+foreground = "#11111b"
+background = "#b4befe"
+template = " \U000F02AD {{ .Project }} "
+
+[transient_prompt]
+foreground_templates = ["{{ if gt .Code 0 }}#f38ba8{{ else }}#a6e3a1{{ end }}"]
+background = "transparent"
+template = "❯ "
+
+[secondary_prompt]
+foreground = "#a6adc8"
+background = "transparent"
+template = "❯❯ "
