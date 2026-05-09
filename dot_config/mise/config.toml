@@ -4,8 +4,8 @@ kubecolor = "0.6.0"
 slsa-verifier = "latest"
 watchexec = "2.5.1"
 terraform = "1.15.2"
-opencode = "1.14.40"
-oh-my-posh = "29.13.0"
+opencode = "1.14.41"
+oh-my-posh = "29.13.1"
 
 [settings]
 idiomatic_version_file_enable_tools = []
