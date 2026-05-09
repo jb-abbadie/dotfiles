@@ -14,3 +14,8 @@ alias gdc="git diff --cached"
 
 alias watch="KUBECOLOR_FORCE_COLORS=truecolor watch "
 alias viddy="KUBECOLOR_FORCE_COLORS=truecolor viddy "
+
+# Use kitten ssh inside kitty so terminfo gets shipped to the remote
+if [[ -n "$KITTY_WINDOW_ID" ]] && (( $+commands[kitten] )); then
+  alias ssh="kitten ssh"
+fi
