@@ -171,7 +171,9 @@
 .zcompdump
 .zcompdump*
 .zdirs
-.zfunc
+.zfunc/*
+!.zfunc/_rsync
+!.zfunc/_remote_files
 .zhistory
 .zoom
 .zplug
