@@ -1,0 +1,99 @@
+# Fallback theme for raw TTY (TERM=linux): no Nerd Font, no powerline glyphs.
+# Catppuccin Mocha palette (kept for parity, ignored if console has no truecolor).
+
+version = 3
+final_space = true
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+
+  [[blocks.segments]]
+  type = "python"
+  style = "plain"
+  foreground = "#cba6f7"
+  template = "{{ if .Venv }}({{ .Venv }}) {{ end }}"
+
+  [[blocks.segments]]
+  type = "path"
+  style = "plain"
+  foreground = "#89b4fa"
+  template = "{{ if .Env.OMP_GIT_REL_PATH }}{{ .Env.OMP_GIT_REL_PATH }}{{ else }}{{ .Path }}{{ end }}"
+
+    [blocks.segments.properties]
+    style = "agnoster_short"
+    max_depth = 3
+    folder_separator_icon = "/"
+
+  [[blocks.segments]]
+  type = "terraform"
+  style = "plain"
+  foreground = "#b4befe"
+  template = "{{ if glob \"*.tf\" }} [tf:{{ .WorkspaceName }}]{{ end }}"
+
+  [[blocks.segments]]
+  type = "git"
+  style = "plain"
+  foreground = "#a6e3a1"
+  foreground_templates = [
+    "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f5c2e7{{ end }}",
+    "{{ if gt .Behind 0 }}#f38ba8{{ end }}",
+    "{{ if gt .Ahead 0 }}#89dceb{{ end }}",
+    "{{ if or (.Working.Changed) (.Staging.Changed) }}#fab387{{ end }}",
+  ]
+  template = " ({{ .HEAD }}{{ if gt .Ahead 0 }} +{{ .Ahead }}{{ end }}{{ if gt .Behind 0 }} -{{ .Behind }}{{ end }}{{ if .Working.Changed }} *{{ end }}{{ if .Staging.Changed }} +{{ end }})"
+
+    [blocks.segments.properties]
+    fetch_status = true
+    branch_icon = ""
+
+[[blocks]]
+type = "prompt"
+alignment = "right"
+
+  [[blocks.segments]]
+  type = "status"
+  style = "plain"
+  foreground = "#a6e3a1"
+  foreground_templates = ["{{ if gt .Code 0 }}#f38ba8{{ end }}"]
+  template = "{{ if gt .Code 0 }}[{{ .Code }}]{{ else }}[ok]{{ end }}"
+
+    [blocks.segments.properties]
+    always_enabled = true
+
+  [[blocks.segments]]
+  type = "executiontime"
+  style = "plain"
+  foreground = "#9399b2"
+  template = " {{ .FormattedMs }}"
+
+    [blocks.segments.properties]
+    threshold = 500
+    style = "round"
+
+  [[blocks.segments]]
+  type = "time"
+  style = "plain"
+  foreground = "#a6adc8"
+  template = " {{ .CurrentDate | date \"15:04:05\" }}"
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "#7f849c"
+  template = "> "
+
+[transient_prompt]
+foreground_templates = ["{{ if gt .Code 0 }}#f38ba8{{ else }}#a6e3a1{{ end }}"]
+background = "transparent"
+template = "> "
+
+[secondary_prompt]
+foreground = "#a6adc8"
+background = "transparent"
+template = ">> "
