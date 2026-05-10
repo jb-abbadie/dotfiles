@@ -49,5 +49,9 @@ complete -o nospace -o default -o bashdefault -F _az_python_argcomplete "az"
 # Make "kubecolor" borrow the same completion logic as "kubectl"
 compdef kubecolor=kubectl
 
-# Oh My Posh prompt
-eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.toml)"
+# Oh My Posh prompt — fall back to a plain theme on raw VT consoles (no Nerd Font)
+if [[ "$TERM" == "linux" ]]; then
+  eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config-tty.toml)"
+else
+  eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.toml)"
+fi
