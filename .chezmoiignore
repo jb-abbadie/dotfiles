@@ -120,7 +120,8 @@
 .jd
 .keychain
 .krew
-.kube
+.kube/*
+!.kube/kubie.yaml
 .lesshst
 .local
 .m2
