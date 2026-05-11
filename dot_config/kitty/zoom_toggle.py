@@ -8,7 +8,7 @@ from kittens.tui.handler import result_handler
 
 LOGO_PATH = os.path.expanduser("~/.cache/kitty-zoom-magnifier.png")
 LOGO_COLOR = (243, 139, 168, 230)  # Catppuccin red, ~90% alpha
-LOGO_SIZE = 81  # 40% larger than 58px
+LOGO_SIZE = 256  # high-res so the logo stays crisp when scaled to a fraction of the window
 
 
 def _chunk(name, data):
