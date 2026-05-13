@@ -3,9 +3,6 @@
   name = jb-abbadie
   signingkey = ~/.ssh/id_github
 
-[includeIf "hasconfig:remote.*.url:ssh://git@codeberg.org/**"]
-  path = ~/.config/git/codeberg
-
 [gpg]
   format = ssh
 
@@ -53,10 +50,6 @@
 [pull]
   ff = only
 
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
-[url "ssh://git@codeberg.org/"]
-  insteadOf = https://codeberg.org/
 [credential "https://github.com"]
   helper =
   helper = !/usr/bin/env gh auth git-credential
