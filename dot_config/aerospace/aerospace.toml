@@ -17,7 +17,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 [mode.main.binding]
 # See: https://nikitabobko.github.io/AeroSpace/goodies#open-a-new-window-with-applescript
-alt-enter = 'exec-and-forget open -a Ghostty'
+alt-enter = 'exec-and-forget open -a WezTerm'
 
 # i3 wraps focus by default
 alt-j = 'focus --boundaries-action wrap-around-the-workspace left'
@@ -88,5 +88,5 @@ l = 'resize width +50'
 enter = 'mode main'
 esc = 'mode main'
 [[on-window-detected]]
-if.app-id = "com.mitchellh.ghostty"
+if.app-id = "com.github.wez.wezterm"
 run = "layout floating"
