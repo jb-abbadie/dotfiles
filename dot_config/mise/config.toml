@@ -4,7 +4,6 @@ kubecolor = "0.6.0"
 slsa-verifier = "latest"
 watchexec = "2.5.1"
 terraform = "1.15.3"
-opencode = "1.15.0"
 oh-my-posh = "29.13.1"
 
 [settings]
