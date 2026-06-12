@@ -731,38 +731,6 @@ url = "https://github.com/sharkdp/hyperfine/releases/download/v1.20.0/hyperfine-
 checksum = "sha256:2508c549b049b1d4342d08edc1cb42bfac169082b6e3069431b5bab9822dbb32"
 url = "https://github.com/sharkdp/hyperfine/releases/download/v1.20.0/hyperfine-v1.20.0-x86_64-pc-windows-msvc.zip"
 
-[[tools.istioctl]]
-version = "1.30.1"
-backend = "aqua:istio/istio/istioctl"
-
-[tools.istioctl."platforms.linux-arm64"]
-checksum = "sha256:3109f575feebf99c9d8372a0db9936a256f50118e09f0f1b307d95c4517ba65c"
-url = "https://github.com/istio/istio/releases/download/1.30.1/istioctl-1.30.1-linux-arm64.tar.gz"
-
-[tools.istioctl."platforms.linux-arm64-musl"]
-checksum = "sha256:3109f575feebf99c9d8372a0db9936a256f50118e09f0f1b307d95c4517ba65c"
-url = "https://github.com/istio/istio/releases/download/1.30.1/istioctl-1.30.1-linux-arm64.tar.gz"
-
-[tools.istioctl."platforms.linux-x64"]
-checksum = "sha256:44ab251548af669661a53f1c30d3bf80f482bc352d9ed5161d577b970e3a58fd"
-url = "https://github.com/istio/istio/releases/download/1.30.1/istioctl-1.30.1-linux-amd64.tar.gz"
-
-[tools.istioctl."platforms.linux-x64-musl"]
-checksum = "sha256:44ab251548af669661a53f1c30d3bf80f482bc352d9ed5161d577b970e3a58fd"
-url = "https://github.com/istio/istio/releases/download/1.30.1/istioctl-1.30.1-linux-amd64.tar.gz"
-
-[tools.istioctl."platforms.macos-arm64"]
-checksum = "sha256:8130e7dc37d98da7550638333fe27a8755e6252665b31c11b34ef9af1887e43b"
-url = "https://github.com/istio/istio/releases/download/1.30.1/istioctl-1.30.1-osx-arm64.tar.gz"
-
-[tools.istioctl."platforms.macos-x64"]
-checksum = "sha256:876596de1c4ca45f73da6b240db34b0ab7b4ecae5cbd86dff0bbb00cdf4d9b55"
-url = "https://github.com/istio/istio/releases/download/1.30.1/istioctl-1.30.1-osx.tar.gz"
-
-[tools.istioctl."platforms.windows-x64"]
-checksum = "sha256:d6c58a959299aeead5e38bf712fc15cba30a1a71bc91bacdd9ef7d4bb638f419"
-url = "https://github.com/istio/istio/releases/download/1.30.1/istioctl-1.30.1-win.zip"
-
 [[tools.k9s]]
 version = "0.51.0"
 backend = "aqua:derailed/k9s"
