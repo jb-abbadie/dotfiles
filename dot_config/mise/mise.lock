@@ -39,6 +39,17 @@ checksum = "sha256:6e7241b51e6817ea6a047693d8e6fed13b31819c9a0dd6c5a726e1592d22f
 url = "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_windows_amd64.zip"
 provenance = "github-attestations"
 
+[[tools."aqua:aws/session-manager-plugin"]]
+version = "1.2.835.0"
+backend = "aqua:aws/session-manager-plugin"
+
+[tools."aqua:aws/session-manager-plugin"."platforms.macos-arm64"]
+checksum = "blake3:699e68ffdd5d7ec88019197774d535ee6687ef56375e02756b0a9759646ffa30"
+url = "https://s3.amazonaws.com/session-manager-downloads/plugin/1.2.835.0/mac_arm64/sessionmanager-bundle.zip"
+
+[tools."aqua:aws/session-manager-plugin"."platforms.macos-x64"]
+url = "https://s3.amazonaws.com/session-manager-downloads/plugin/1.2.835.0/mac/sessionmanager-bundle.zip"
+
 [[tools.argocd]]
 version = "3.4.3"
 backend = "aqua:argoproj/argo-cd"
@@ -117,27 +128,27 @@ checksum = "sha256:a4febbc8c48671e5729d85e29e4ebe5a051b7250d19545bca18e725ccf40e
 url = "https://github.com/ast-grep/ast-grep/releases/download/0.43.0/app-x86_64-pc-windows-msvc.zip"
 
 [[tools.aws]]
-version = "2.35.4"
+version = "2.35.7"
 backend = "aqua:aws/aws-cli"
 
 [tools.aws."platforms.linux-arm64"]
-url = "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.35.4.zip"
+url = "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.35.7.zip"
 
 [tools.aws."platforms.linux-arm64-musl"]
-url = "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.35.4.zip"
+url = "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.35.7.zip"
 
 [tools.aws."platforms.linux-x64"]
-url = "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.35.4.zip"
+url = "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.35.7.zip"
 
 [tools.aws."platforms.linux-x64-musl"]
-url = "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.35.4.zip"
+url = "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.35.7.zip"
 
 [tools.aws."platforms.macos-arm64"]
-checksum = "blake3:b35ed38d3fb571bd1774be734400caf66ade8daf33f8d73bb95d2ad4c6e20d7a"
-url = "https://awscli.amazonaws.com/AWSCLIV2-2.35.4.pkg"
+checksum = "blake3:5c1f08ec641418876ac60da1a35eb66758f7b1d405615749cd1189d366d24e2e"
+url = "https://awscli.amazonaws.com/AWSCLIV2-2.35.7.pkg"
 
 [tools.aws."platforms.macos-x64"]
-url = "https://awscli.amazonaws.com/AWSCLIV2-2.35.4.pkg"
+url = "https://awscli.amazonaws.com/AWSCLIV2-2.35.7.pkg"
 
 [[tools.aws-sso]]
 version = "2.2.5"
@@ -423,36 +434,36 @@ checksum = "sha256:f26b855ad241db1c3c1f86bb80206aefe433ace71fa391b87ed75e293dbe0
 url = "https://github.com/mr-karan/doggo/releases/download/v1.1.7/doggo_1.1.7_Windows_x86_64.zip"
 
 [[tools.dua]]
-version = "2.34.0"
+version = "2.36.0"
 backend = "aqua:Byron/dua-cli"
 
 [tools.dua."platforms.linux-arm64"]
-checksum = "sha256:d77a07e3aa1af12cfd9a60ace5a15395af96040089ba358df76d1621d12b1893"
-url = "https://github.com/Byron/dua-cli/releases/download/v2.34.0/dua-v2.34.0-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:7491466c35513bb65c4758f57865093833806521aed3cd443ae39abc27ea9ece"
+url = "https://github.com/Byron/dua-cli/releases/download/v2.36.0/dua-v2.36.0-aarch64-unknown-linux-musl.tar.gz"
 
 [tools.dua."platforms.linux-arm64-musl"]
-checksum = "sha256:d77a07e3aa1af12cfd9a60ace5a15395af96040089ba358df76d1621d12b1893"
-url = "https://github.com/Byron/dua-cli/releases/download/v2.34.0/dua-v2.34.0-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:7491466c35513bb65c4758f57865093833806521aed3cd443ae39abc27ea9ece"
+url = "https://github.com/Byron/dua-cli/releases/download/v2.36.0/dua-v2.36.0-aarch64-unknown-linux-musl.tar.gz"
 
 [tools.dua."platforms.linux-x64"]
-checksum = "sha256:4f2de3f97206d6bca0d15fbb9241f52b1014df35fd7ae362bacf67371164c1a1"
-url = "https://github.com/Byron/dua-cli/releases/download/v2.34.0/dua-v2.34.0-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:e3e93526e03b2c5e7951a91de42e5abf7d6d47e251b448ec2b8f364b3573c7be"
+url = "https://github.com/Byron/dua-cli/releases/download/v2.36.0/dua-v2.36.0-x86_64-unknown-linux-musl.tar.gz"
 
 [tools.dua."platforms.linux-x64-musl"]
-checksum = "sha256:4f2de3f97206d6bca0d15fbb9241f52b1014df35fd7ae362bacf67371164c1a1"
-url = "https://github.com/Byron/dua-cli/releases/download/v2.34.0/dua-v2.34.0-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:e3e93526e03b2c5e7951a91de42e5abf7d6d47e251b448ec2b8f364b3573c7be"
+url = "https://github.com/Byron/dua-cli/releases/download/v2.36.0/dua-v2.36.0-x86_64-unknown-linux-musl.tar.gz"
 
 [tools.dua."platforms.macos-arm64"]
-checksum = "sha256:c1b346360d0eabee17d43c03e4820fb097e9c334f07dd77708a44355f7b887e7"
-url = "https://github.com/Byron/dua-cli/releases/download/v2.34.0/dua-v2.34.0-x86_64-apple-darwin.tar.gz"
+checksum = "sha256:b64eca403a1f6f95dd5283dbb3e4455ec1738d1ef65df852f80b8d396e370a1a"
+url = "https://github.com/Byron/dua-cli/releases/download/v2.36.0/dua-v2.36.0-x86_64-apple-darwin.tar.gz"
 
 [tools.dua."platforms.macos-x64"]
-checksum = "sha256:c1b346360d0eabee17d43c03e4820fb097e9c334f07dd77708a44355f7b887e7"
-url = "https://github.com/Byron/dua-cli/releases/download/v2.34.0/dua-v2.34.0-x86_64-apple-darwin.tar.gz"
+checksum = "sha256:b64eca403a1f6f95dd5283dbb3e4455ec1738d1ef65df852f80b8d396e370a1a"
+url = "https://github.com/Byron/dua-cli/releases/download/v2.36.0/dua-v2.36.0-x86_64-apple-darwin.tar.gz"
 
 [tools.dua."platforms.windows-x64"]
-checksum = "sha256:abbd93e4d8eaf4d1b9181310a0240e37fc3d3e107a70870289125c0171fefca9"
-url = "https://github.com/Byron/dua-cli/releases/download/v2.34.0/dua-v2.34.0-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:01bf5a17fc9ec0c569eb66540f4c88fde0cab868f1f608d9965fd5c65fcc625a"
+url = "https://github.com/Byron/dua-cli/releases/download/v2.36.0/dua-v2.36.0-x86_64-pc-windows-msvc.zip"
 
 [[tools.dyff]]
 version = "1.12.0"
@@ -511,42 +522,42 @@ checksum = "sha256:b2816e506390a89941c63c9187d58a3cc10e9a55f2ef0685f9ea0eccaf7c9
 url = "https://github.com/sharkdp/fd/releases/download/v10.4.2/fd-v10.4.2-x86_64-pc-windows-msvc.zip"
 
 [[tools.gh]]
-version = "2.94.0"
+version = "2.95.0"
 backend = "aqua:cli/cli"
 
 [tools.gh."platforms.linux-arm64"]
-checksum = "sha256:705a23b70b0f1b7ba4c302fdcef392ce3edaacfa7ce8e85e4d93d72ea800a538"
-url = "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_linux_arm64.tar.gz"
+checksum = "sha256:d41e0b3b6218e5741c8bb4db39b16e53a59e0e06299a8489bd38f623ef7ebaae"
+url = "https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_linux_arm64.tar.gz"
 provenance = "github-attestations"
 
 [tools.gh."platforms.linux-arm64-musl"]
-checksum = "sha256:705a23b70b0f1b7ba4c302fdcef392ce3edaacfa7ce8e85e4d93d72ea800a538"
-url = "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_linux_arm64.tar.gz"
+checksum = "sha256:d41e0b3b6218e5741c8bb4db39b16e53a59e0e06299a8489bd38f623ef7ebaae"
+url = "https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_linux_arm64.tar.gz"
 provenance = "github-attestations"
 
 [tools.gh."platforms.linux-x64"]
-checksum = "sha256:a757f1ba6db18f4de8cbadb244843a5f89bc75b5e7c6fc127d2bd77fbd12ed62"
-url = "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_linux_amd64.tar.gz"
+checksum = "sha256:25d1e4729e8808c9ed3d613e96ebd3f3e44446f2d368c89d878a71a36ddb3d8c"
+url = "https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_linux_amd64.tar.gz"
 provenance = "github-attestations"
 
 [tools.gh."platforms.linux-x64-musl"]
-checksum = "sha256:a757f1ba6db18f4de8cbadb244843a5f89bc75b5e7c6fc127d2bd77fbd12ed62"
-url = "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_linux_amd64.tar.gz"
+checksum = "sha256:25d1e4729e8808c9ed3d613e96ebd3f3e44446f2d368c89d878a71a36ddb3d8c"
+url = "https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_linux_amd64.tar.gz"
 provenance = "github-attestations"
 
 [tools.gh."platforms.macos-arm64"]
-checksum = "sha256:4f9bc1a5e77500737290a307b40b4c396a4d23729f55340f2a83f414410165a1"
-url = "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_macOS_arm64.zip"
+checksum = "sha256:3677f9c27965825f9c7d50395473c134edaea4b484373ef6b25de653570a0489"
+url = "https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_macOS_arm64.zip"
 provenance = "github-attestations"
 
 [tools.gh."platforms.macos-x64"]
-checksum = "sha256:733ee8fa49247d27cd94a6c7384455bdecaa82172a3bcfad63ac1ecc2867251d"
-url = "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_macOS_amd64.zip"
+checksum = "sha256:985707e9ac60c95ed51cddd808c338b481abe69fffa77e9d6547c3750045f77e"
+url = "https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_macOS_amd64.zip"
 provenance = "github-attestations"
 
 [tools.gh."platforms.windows-x64"]
-checksum = "sha256:c0766af54195dfa0bcd9a0cb63a45c313fbaffdebb9f736f666e9ba4be8c91e8"
-url = "https://github.com/cli/cli/releases/download/v2.94.0/gh_2.94.0_windows_amd64.zip"
+checksum = "sha256:19a7154161ada9cfaa9e57edb752ecc679b75c391a62e4f7b586eea1df30b5bb"
+url = "https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_windows_amd64.zip"
 provenance = "github-attestations"
 
 [[tools.github-markdown-toc]]
@@ -636,36 +647,36 @@ checksum = "sha256:3ca8fb4630b07c419cbdd51f754e31363cfcfb83b3a5354d9e895c90be2cc
 url = "https://dl.google.com/go/go1.26.4.windows-amd64.zip"
 
 [[tools.helm]]
-version = "4.2.1"
+version = "4.2.2"
 backend = "aqua:helm/helm"
 
 [tools.helm."platforms.linux-arm64"]
-checksum = "sha256:596b9a73d366c1e72ce67d595c22805480e30914593aafbc9f547694e72814db"
-url = "https://get.helm.sh/helm-v4.2.1-linux-arm64.tar.gz"
+checksum = "sha256:78803142087a0069fa4b50d3f32a84d3ef25c14d1ee8a40fbccf86a6216d2f36"
+url = "https://get.helm.sh/helm-v4.2.2-linux-arm64.tar.gz"
 
 [tools.helm."platforms.linux-arm64-musl"]
-checksum = "sha256:596b9a73d366c1e72ce67d595c22805480e30914593aafbc9f547694e72814db"
-url = "https://get.helm.sh/helm-v4.2.1-linux-arm64.tar.gz"
+checksum = "sha256:78803142087a0069fa4b50d3f32a84d3ef25c14d1ee8a40fbccf86a6216d2f36"
+url = "https://get.helm.sh/helm-v4.2.2-linux-arm64.tar.gz"
 
 [tools.helm."platforms.linux-x64"]
-checksum = "sha256:479dca836e5b45e8bd222400c5591b0e3a647378f03ff96597180db97c17fdae"
-url = "https://get.helm.sh/helm-v4.2.1-linux-amd64.tar.gz"
+checksum = "sha256:9adafecab4d406853bba163a70e9f104f47dbbf65ce24b7653bae7e36150bcb6"
+url = "https://get.helm.sh/helm-v4.2.2-linux-amd64.tar.gz"
 
 [tools.helm."platforms.linux-x64-musl"]
-checksum = "sha256:479dca836e5b45e8bd222400c5591b0e3a647378f03ff96597180db97c17fdae"
-url = "https://get.helm.sh/helm-v4.2.1-linux-amd64.tar.gz"
+checksum = "sha256:9adafecab4d406853bba163a70e9f104f47dbbf65ce24b7653bae7e36150bcb6"
+url = "https://get.helm.sh/helm-v4.2.2-linux-amd64.tar.gz"
 
 [tools.helm."platforms.macos-arm64"]
-checksum = "sha256:896472d2ec0740c60f64a9df0fc30d478beee38a1a2a6ed91aa6e6ee177c1575"
-url = "https://get.helm.sh/helm-v4.2.1-darwin-arm64.tar.gz"
+checksum = "sha256:5410a0dae3d5d91f45653b161260d9301aabc4ae80ae50a6605d66884b6df8ea"
+url = "https://get.helm.sh/helm-v4.2.2-darwin-arm64.tar.gz"
 
 [tools.helm."platforms.macos-x64"]
-checksum = "sha256:2a21c9f368d608bcf6eb794ebc06514eb6b529a846b60fe4a43dea7bcce65228"
-url = "https://get.helm.sh/helm-v4.2.1-darwin-amd64.tar.gz"
+checksum = "sha256:10c1e36ee8c5f2e2ee25a16599cb03ab74c0953cd889cacb980a49ba4b6574ba"
+url = "https://get.helm.sh/helm-v4.2.2-darwin-amd64.tar.gz"
 
 [tools.helm."platforms.windows-x64"]
-checksum = "sha256:36b603d5c4f4af526035631ead3adba5535250ad85f2b052960f7f874bdafa68"
-url = "https://get.helm.sh/helm-v4.2.1-windows-amd64.tar.gz"
+checksum = "sha256:29589dad546f8bcd3a6ad92261fcb4a6c9db4a32f9e4fc4f5212db189553dc60"
+url = "https://get.helm.sh/helm-v4.2.2-windows-amd64.tar.gz"
 
 [[tools.helm-ct]]
 version = "3.14.0"
@@ -991,36 +1002,36 @@ version = "11.17.0"
 backend = "npm:npm"
 
 [[tools.oh-my-posh]]
-version = "29.15.1"
+version = "29.17.0"
 backend = "aqua:JanDeDobbeleer/oh-my-posh"
 
 [tools.oh-my-posh."platforms.linux-arm64"]
-checksum = "sha256:e179ed377ec933ef9852066a8eca372ef37e8dd544824b8d349aa3f262456d35"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.15.1/posh-linux-arm64"
+checksum = "sha256:8c517daaa34e68d3ac0c075a60f3adf235b09e1f83b035ca62be91ad85978481"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.17.0/posh-linux-arm64"
 
 [tools.oh-my-posh."platforms.linux-arm64-musl"]
-checksum = "sha256:e179ed377ec933ef9852066a8eca372ef37e8dd544824b8d349aa3f262456d35"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.15.1/posh-linux-arm64"
+checksum = "sha256:8c517daaa34e68d3ac0c075a60f3adf235b09e1f83b035ca62be91ad85978481"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.17.0/posh-linux-arm64"
 
 [tools.oh-my-posh."platforms.linux-x64"]
-checksum = "sha256:7357a76e91efcbe4c86ecbab97b08d55aaa13912762d371831a20fb4e2a9c0be"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.15.1/posh-linux-amd64"
+checksum = "sha256:0fdf0b043adb45158482fce3d9cbcc482b0051da55405fce3789961bce5298d0"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.17.0/posh-linux-amd64"
 
 [tools.oh-my-posh."platforms.linux-x64-musl"]
-checksum = "sha256:7357a76e91efcbe4c86ecbab97b08d55aaa13912762d371831a20fb4e2a9c0be"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.15.1/posh-linux-amd64"
+checksum = "sha256:0fdf0b043adb45158482fce3d9cbcc482b0051da55405fce3789961bce5298d0"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.17.0/posh-linux-amd64"
 
 [tools.oh-my-posh."platforms.macos-arm64"]
-checksum = "sha256:45bb51b5672adf6c9012b5935135fcc9b55f1fad5998b9cdf0473940e4eaa07a"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.15.1/posh-darwin-arm64"
+checksum = "sha256:09511152970d8728829b59c514f03457f7535cd6de23bce17f009684e13e74ce"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.17.0/posh-darwin-arm64"
 
 [tools.oh-my-posh."platforms.macos-x64"]
-checksum = "sha256:affa5ffa45cbd031c4351febcd384211db65612d64d063746724a96af68d4783"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.15.1/posh-darwin-amd64"
+checksum = "sha256:9514c4ec43ccd3871da96944b8e97ee7e278bd724bcb8ba062caf73efdb2b87e"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.17.0/posh-darwin-amd64"
 
 [tools.oh-my-posh."platforms.windows-x64"]
-checksum = "sha256:cdcf1922ab13d0c0a9d837008b3f3e281b16e2f2c6c705389107ce74b0b11976"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.15.1/posh-windows-amd64.exe"
+checksum = "sha256:f05ec769d8e71937cdbb24eaa69a389a35eaa0bbf8bbc090edc80148fa9ec4eb"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.17.0/posh-windows-amd64.exe"
 
 [[tools.packer]]
 version = "1.15.4"
@@ -1055,70 +1066,70 @@ checksum = "sha256:a50db29fae2972f5e5d05ecee23f80e303d605f8132dc2167848fc89184f0
 url = "https://releases.hashicorp.com/packer/1.15.4/packer_1.15.4_windows_amd64.zip"
 
 [[tools.pipx]]
-version = "1.14.0"
+version = "1.14.1"
 backend = "aqua:pypa/pipx"
 
 [tools.pipx."platforms.linux-arm64"]
-checksum = "sha256:017bf39b852bb3db51db094eca85b71e3719a4513c5834489f5e7ffc6da5d931"
-url = "https://github.com/pypa/pipx/releases/download/1.14.0/pipx.pyz"
+checksum = "sha256:4ca0f4ea421bac9cf47f0479d37c373048257eb00ab95551c8b9aa4a837c467d"
+url = "https://github.com/pypa/pipx/releases/download/1.14.1/pipx.pyz"
 
 [tools.pipx."platforms.linux-arm64-musl"]
-checksum = "sha256:017bf39b852bb3db51db094eca85b71e3719a4513c5834489f5e7ffc6da5d931"
-url = "https://github.com/pypa/pipx/releases/download/1.14.0/pipx.pyz"
+checksum = "sha256:4ca0f4ea421bac9cf47f0479d37c373048257eb00ab95551c8b9aa4a837c467d"
+url = "https://github.com/pypa/pipx/releases/download/1.14.1/pipx.pyz"
 
 [tools.pipx."platforms.linux-x64"]
-checksum = "sha256:017bf39b852bb3db51db094eca85b71e3719a4513c5834489f5e7ffc6da5d931"
-url = "https://github.com/pypa/pipx/releases/download/1.14.0/pipx.pyz"
+checksum = "sha256:4ca0f4ea421bac9cf47f0479d37c373048257eb00ab95551c8b9aa4a837c467d"
+url = "https://github.com/pypa/pipx/releases/download/1.14.1/pipx.pyz"
 
 [tools.pipx."platforms.linux-x64-musl"]
-checksum = "sha256:017bf39b852bb3db51db094eca85b71e3719a4513c5834489f5e7ffc6da5d931"
-url = "https://github.com/pypa/pipx/releases/download/1.14.0/pipx.pyz"
+checksum = "sha256:4ca0f4ea421bac9cf47f0479d37c373048257eb00ab95551c8b9aa4a837c467d"
+url = "https://github.com/pypa/pipx/releases/download/1.14.1/pipx.pyz"
 
 [tools.pipx."platforms.macos-arm64"]
-checksum = "sha256:017bf39b852bb3db51db094eca85b71e3719a4513c5834489f5e7ffc6da5d931"
-url = "https://github.com/pypa/pipx/releases/download/1.14.0/pipx.pyz"
+checksum = "sha256:4ca0f4ea421bac9cf47f0479d37c373048257eb00ab95551c8b9aa4a837c467d"
+url = "https://github.com/pypa/pipx/releases/download/1.14.1/pipx.pyz"
 
 [tools.pipx."platforms.macos-x64"]
-checksum = "sha256:017bf39b852bb3db51db094eca85b71e3719a4513c5834489f5e7ffc6da5d931"
-url = "https://github.com/pypa/pipx/releases/download/1.14.0/pipx.pyz"
+checksum = "sha256:4ca0f4ea421bac9cf47f0479d37c373048257eb00ab95551c8b9aa4a837c467d"
+url = "https://github.com/pypa/pipx/releases/download/1.14.1/pipx.pyz"
 
 [[tools.prek]]
-version = "0.4.4"
+version = "0.4.5"
 backend = "aqua:j178/prek"
 
 [tools.prek."platforms.linux-arm64"]
-checksum = "sha256:b38ea178e3f73a7a767edde47a091faac2814d93ba7faa590cba8d19d0fdc76a"
-url = "https://github.com/j178/prek/releases/download/v0.4.4/prek-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:9c3f0686b6f12995b2f9cbc2953a457987622a29bbcdeaa64f62527af851fc1e"
+url = "https://github.com/j178/prek/releases/download/v0.4.5/prek-aarch64-unknown-linux-musl.tar.gz"
 provenance = "github-attestations"
 
 [tools.prek."platforms.linux-arm64-musl"]
-checksum = "sha256:b38ea178e3f73a7a767edde47a091faac2814d93ba7faa590cba8d19d0fdc76a"
-url = "https://github.com/j178/prek/releases/download/v0.4.4/prek-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:9c3f0686b6f12995b2f9cbc2953a457987622a29bbcdeaa64f62527af851fc1e"
+url = "https://github.com/j178/prek/releases/download/v0.4.5/prek-aarch64-unknown-linux-musl.tar.gz"
 provenance = "github-attestations"
 
 [tools.prek."platforms.linux-x64"]
-checksum = "sha256:4a0aa963c6468ebcd4734ee7d763e8c1223bfb9bdabcb4528a7afac6b0147e12"
-url = "https://github.com/j178/prek/releases/download/v0.4.4/prek-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:94698d1cd74e7b462a017257efeab6f46142f4fb3da9a1314f06c1d55c26d614"
+url = "https://github.com/j178/prek/releases/download/v0.4.5/prek-x86_64-unknown-linux-musl.tar.gz"
 provenance = "github-attestations"
 
 [tools.prek."platforms.linux-x64-musl"]
-checksum = "sha256:4a0aa963c6468ebcd4734ee7d763e8c1223bfb9bdabcb4528a7afac6b0147e12"
-url = "https://github.com/j178/prek/releases/download/v0.4.4/prek-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:94698d1cd74e7b462a017257efeab6f46142f4fb3da9a1314f06c1d55c26d614"
+url = "https://github.com/j178/prek/releases/download/v0.4.5/prek-x86_64-unknown-linux-musl.tar.gz"
 provenance = "github-attestations"
 
 [tools.prek."platforms.macos-arm64"]
-checksum = "sha256:d3d74f96bbb9fe88d14bdb3119501f8f39602b885e19f57c6567791599afd231"
-url = "https://github.com/j178/prek/releases/download/v0.4.4/prek-aarch64-apple-darwin.tar.gz"
+checksum = "sha256:ed4920762f0e3db07163c437af622a1d4905e1ad7053692a495551b9ce92549f"
+url = "https://github.com/j178/prek/releases/download/v0.4.5/prek-aarch64-apple-darwin.tar.gz"
 provenance = "github-attestations"
 
 [tools.prek."platforms.macos-x64"]
-checksum = "sha256:960809f1b7541210e4182fb5408b2de5394ef4a490f8de51bc19724e4c0df227"
-url = "https://github.com/j178/prek/releases/download/v0.4.4/prek-x86_64-apple-darwin.tar.gz"
+checksum = "sha256:b0afc8bbea69d61bbfe49100394df99eed15a9c4675b06c9936417e65aa88b16"
+url = "https://github.com/j178/prek/releases/download/v0.4.5/prek-x86_64-apple-darwin.tar.gz"
 provenance = "github-attestations"
 
 [tools.prek."platforms.windows-x64"]
-checksum = "sha256:c6b503e858a7ba17df47618d1c5b0331132b70bcc2a35704e5f422d21c433abe"
-url = "https://github.com/j178/prek/releases/download/v0.4.4/prek-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:1ee0d2b210acc805e0ccd1b00fa84eb1d0d939f1a79da37ae9f432e1c16c5986"
+url = "https://github.com/j178/prek/releases/download/v0.4.5/prek-x86_64-pc-windows-msvc.zip"
 provenance = "github-attestations"
 
 [[tools.promtool]]
@@ -1502,74 +1513,74 @@ checksum = "sha256:5fbfb643b83c4ad489bde15a0e0d46e53dc9aa8dfa76d25da3c4bd2698a41
 url = "https://github.com/terraform-linters/tflint/releases/download/v0.63.1/tflint_windows_amd64.zip"
 
 [[tools.tilt]]
-version = "0.37.3"
+version = "0.37.4"
 backend = "aqua:tilt-dev/tilt"
 
 [tools.tilt."platforms.linux-arm64"]
-checksum = "sha256:826f48198f368ef5edb684e9ae4c87ff76eca84c904f72b2376b29b93bffc019"
-url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.3/tilt.0.37.3.linux.arm64.tar.gz"
+checksum = "sha256:9fae756bda2b40dbac9ccce5bbb62f34f9ba727790984a25b8641988f244408c"
+url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.4/tilt.0.37.4.linux.arm64.tar.gz"
 
 [tools.tilt."platforms.linux-arm64-musl"]
-checksum = "sha256:826f48198f368ef5edb684e9ae4c87ff76eca84c904f72b2376b29b93bffc019"
-url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.3/tilt.0.37.3.linux.arm64.tar.gz"
+checksum = "sha256:9fae756bda2b40dbac9ccce5bbb62f34f9ba727790984a25b8641988f244408c"
+url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.4/tilt.0.37.4.linux.arm64.tar.gz"
 
 [tools.tilt."platforms.linux-x64"]
-checksum = "sha256:e90bc6cf70882bc7579d8174a27cab2de0284612ec7339e4b32f669cd5de4e5c"
-url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.3/tilt.0.37.3.linux.x86_64.tar.gz"
+checksum = "sha256:81fc090117ef25478c98b9752fdc86e44eaf522c4e8421424d7ddf1fb4cfac21"
+url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.4/tilt.0.37.4.linux.x86_64.tar.gz"
 
 [tools.tilt."platforms.linux-x64-musl"]
-checksum = "sha256:e90bc6cf70882bc7579d8174a27cab2de0284612ec7339e4b32f669cd5de4e5c"
-url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.3/tilt.0.37.3.linux.x86_64.tar.gz"
+checksum = "sha256:81fc090117ef25478c98b9752fdc86e44eaf522c4e8421424d7ddf1fb4cfac21"
+url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.4/tilt.0.37.4.linux.x86_64.tar.gz"
 
 [tools.tilt."platforms.macos-arm64"]
-checksum = "sha256:4d1f4e604aa5ca65a2df0d19c9e9b351cf9703be886f52fa5f3afd317d968ffd"
-url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.3/tilt.0.37.3.mac.arm64.tar.gz"
+checksum = "sha256:d25cd4470480325b31effa787e46f002601205c81e41b3c7f412e2defec6c4aa"
+url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.4/tilt.0.37.4.mac.arm64.tar.gz"
 
 [tools.tilt."platforms.macos-x64"]
-checksum = "sha256:c8e2b58fb7efdec9ae7e3fc4249b4f662dc6520eabe8efcac84b80856f20d31b"
-url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.3/tilt.0.37.3.mac.x86_64.tar.gz"
+checksum = "sha256:e4c7c39d28b4223378d53be292c21c30d6f80497e25cff8b2e5142c14f0144ee"
+url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.4/tilt.0.37.4.mac.x86_64.tar.gz"
 
 [tools.tilt."platforms.windows-x64"]
-checksum = "sha256:9e6cf1696618397a43fc4c80627d42a1ef65937a863ac1a57aa8cf78e077409e"
-url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.3/tilt.0.37.3.windows.x86_64.zip"
+checksum = "sha256:41d38b2ecd569e9b0ec73bc7d753fdb67bd24fcf1e434610b72d59c9a22c3041"
+url = "https://github.com/tilt-dev/tilt/releases/download/v0.37.4/tilt.0.37.4.windows.x86_64.zip"
 
 [[tools.trivy]]
-version = "0.71.0"
+version = "0.71.1"
 backend = "aqua:aquasecurity/trivy"
 
 [tools.trivy."platforms.linux-arm64"]
-checksum = "sha256:2561be394a3199c911f82fced606cbc05e1cb23eb6ce1da6935540adb76f4252"
-url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.0/trivy_0.71.0_Linux-ARM64.tar.gz"
+checksum = "sha256:a7daaee66817d67a4963e8f9ddf15f5238ee021b55d3cd8695b1b7801afd34a7"
+url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.1/trivy_0.71.1_Linux-ARM64.tar.gz"
 provenance = "cosign"
 
 [tools.trivy."platforms.linux-arm64-musl"]
-checksum = "sha256:2561be394a3199c911f82fced606cbc05e1cb23eb6ce1da6935540adb76f4252"
-url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.0/trivy_0.71.0_Linux-ARM64.tar.gz"
+checksum = "sha256:a7daaee66817d67a4963e8f9ddf15f5238ee021b55d3cd8695b1b7801afd34a7"
+url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.1/trivy_0.71.1_Linux-ARM64.tar.gz"
 provenance = "cosign"
 
 [tools.trivy."platforms.linux-x64"]
-checksum = "sha256:30a3d22b23f88c233f1658f562fb477cae3b3e8b4761109d515b7698daf85814"
-url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.0/trivy_0.71.0_Linux-64bit.tar.gz"
+checksum = "sha256:3cbae37cd440cd8676e5ce9207fe460b5641c7579a17e9d00f8894928c41a88d"
+url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.1/trivy_0.71.1_Linux-64bit.tar.gz"
 provenance = "cosign"
 
 [tools.trivy."platforms.linux-x64-musl"]
-checksum = "sha256:30a3d22b23f88c233f1658f562fb477cae3b3e8b4761109d515b7698daf85814"
-url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.0/trivy_0.71.0_Linux-64bit.tar.gz"
+checksum = "sha256:3cbae37cd440cd8676e5ce9207fe460b5641c7579a17e9d00f8894928c41a88d"
+url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.1/trivy_0.71.1_Linux-64bit.tar.gz"
 provenance = "cosign"
 
 [tools.trivy."platforms.macos-arm64"]
-checksum = "sha256:95d4e896b120816edd0995a2df8adca26a8621b7bf62036a89b1d54a7b718a74"
-url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.0/trivy_0.71.0_macOS-ARM64.tar.gz"
+checksum = "sha256:5eb3576d4a41c9fa274dc8a62b2e6baebb2bf423eda908ed36d81d574e293c48"
+url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.1/trivy_0.71.1_macOS-ARM64.tar.gz"
 provenance = "cosign"
 
 [tools.trivy."platforms.macos-x64"]
-checksum = "sha256:4558afb13d017615ca85011901caab78b4f09196e320b05a56c9fdc5615a1428"
-url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.0/trivy_0.71.0_macOS-64bit.tar.gz"
+checksum = "sha256:de123352f519c6310d5471b5271b029c02b04f3cce33597b87f60064e1760a3f"
+url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.1/trivy_0.71.1_macOS-64bit.tar.gz"
 provenance = "cosign"
 
 [tools.trivy."platforms.windows-x64"]
-checksum = "sha256:382250158fb9431ff9b87904205027b066a544234b8952b2dd764bd712d55387"
-url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.0/trivy_0.71.0_windows-64bit.zip"
+checksum = "sha256:ba67daf06923f52938812d1af134b3193e22b3bc7a525743b9f2a3ded7ab5904"
+url = "https://github.com/aquasecurity/trivy/releases/download/v0.71.1/trivy_0.71.1_windows-64bit.zip"
 provenance = "cosign"
 
 [[tools.uv]]
