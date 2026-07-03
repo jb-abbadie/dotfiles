@@ -1,0 +1,9 @@
+[[mgr.prepend_keymap]]
+on = ["g", "m"]
+run = "cd /media"
+desc = "Go to /media"
+
+[[mgr.prepend_keymap]]
+on = "E"
+run = '''shell 'ya pub extract --list "$@"' '''
+desc = "Extract here"
