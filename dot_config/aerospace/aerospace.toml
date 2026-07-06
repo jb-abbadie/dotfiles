@@ -78,6 +78,9 @@ alt-shift-0 = 'move-node-to-workspace 10'
 
 alt-shift-c = 'reload-config'
 
+# Interactive area screenshot to clipboard, same as macOS's ctrl-cmd-shift-4
+alt-t = 'exec-and-forget screencapture -i -c'
+
 alt-r = 'mode resize'
 
 [mode.resize.binding]
