@@ -32,14 +32,12 @@ zle -N skim-cd-widget
 bindkey '^S' skim-cd-widget
 setopt noflowcontrol
 
-# Keychain
-eval "$(keychain --eval --quiet)"
+# mise
+eval "$(mise activate zsh)"
 
 # Sheldon
 eval "$(sheldon source)"
 
-# mise
-eval "$(mise activate zsh)"
 
 autoload bashcompinit && bashcompinit
 complete -C "$(which aws_completer)" aws
@@ -55,3 +53,5 @@ if [[ "$TERM" == "linux" ]]; then
 else
   eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.toml)"
 fi
+
+[ -r ~/.zshrc.ansible ] && source ~/.zshrc.ansible

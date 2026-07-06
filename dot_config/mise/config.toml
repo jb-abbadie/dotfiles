@@ -3,7 +3,6 @@ kubecolor = "0.6.0"
 "cargo:stu" = "latest"
 slsa-verifier = "latest"
 watchexec = "2.5.1"
-terraform = "1.15.6"
 oh-my-posh = "29.18.0"
 
 [settings]

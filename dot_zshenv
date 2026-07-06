@@ -1,5 +1,4 @@
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH:$HOME/prog/go/bin:$HOME/.cargo/bin:$HOME/.krew/bin:/usr/local/go/bin"
-export GOPATH="$HOME/prog/go"
 export AWS_SDK_LOAD_CONFIG=1
 export EDITOR="nvim"
 export DOCKER_BUILDKIT=1
@@ -15,3 +14,4 @@ export MOZ_ENABLE_WAYLAND=1
 skip_global_compinit=1
 
 export KUBECTL_EXTERNAL_DIFF=delta
+. "$HOME/.cargo/env"

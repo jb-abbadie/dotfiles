@@ -56,3 +56,9 @@
 [credential "https://gist.github.com"]
   helper =
   helper = !/usr/bin/env gh auth git-credential
+
+# Machine-local, un-committed overrides (work identity, hooks, etc.).
+# Missing on machines that don't have it (e.g. personal laptop) — git ignores
+# a non-existent include path silently.
+[include]
+  path = ~/.config/git/local.config
