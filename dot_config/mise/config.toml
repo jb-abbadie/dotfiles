@@ -1,9 +1,9 @@
 [tools]
-kubecolor = "0.6.0"
+kubecolor = "0.7.1"
 "cargo:stu" = "latest"
 slsa-verifier = "latest"
-watchexec = "2.5.1"
-oh-my-posh = "29.18.0"
+watchexec = "2.7.0"
+oh-my-posh = "31.1.1"
 
 [settings]
 idiomatic_version_file_enable_tools = []
