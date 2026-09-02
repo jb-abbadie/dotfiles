@@ -38,6 +38,15 @@ eval "$(mise activate zsh)"
 # Sheldon
 eval "$(sheldon source)"
 
+# Option/Alt+Left/Right → word motion, enhanced-keyboard-mode encoding.
+# In legacy mode Kitty sends \e\e[D and zimfw/input binds it. But when a TUI
+# (neovim/fzf/lazygit) enables Kitty's keyboard protocol and exits uncleanly,
+# it leaves the protocol pushed and Option+arrow switches to the CSI-modifier
+# form \e[1;3D, which nothing binds — so the trailing D/C leaks. Bind that form
+# here (after sheldon) so word-motion works regardless of Kitty's current mode.
+bindkey "^[[1;3D" backward-word   # Option+Left
+bindkey "^[[1;3C" forward-word    # Option+Right
+
 
 autoload bashcompinit && bashcompinit
 complete -C "$(which aws_completer)" aws
