@@ -1333,37 +1333,83 @@ url = "https://nodejs.org/dist/v26.8.1/node-v26.8.1-win-x64.zip"
 version = "12.0.2"
 backend = "npm:npm"
 
+[[tools.oh-my-pi]]
+version = "18.1.17"
+backend = "github:can1357/oh-my-pi"
+
+[tools.oh-my-pi."platforms.linux-arm64"]
+checksum = "sha256:58ab1b8f75d202cf3767e19901c834d2435898a189d5993be6d5cae6736716e1"
+url = "https://github.com/can1357/oh-my-pi/releases/download/v18.1.17/omp-linux-arm64"
+url_api = "https://api.github.com/repos/can1357/oh-my-pi/releases/assets/555681812"
+
+[tools.oh-my-pi."platforms.linux-arm64-musl"]
+checksum = "sha256:304b95000209425f4294a8ee0ca8214c69275dec5e8295c080bcb4aeae28b68e"
+url = "https://github.com/can1357/oh-my-pi/releases/download/v18.1.17/omp-linux-musl-arm64"
+url_api = "https://api.github.com/repos/can1357/oh-my-pi/releases/assets/555681808"
+
+[tools.oh-my-pi."platforms.linux-x64"]
+checksum = "sha256:040c254ddeb30f6d592be67d1469dc67fcac14e933fa04dbf690f42820ffd820"
+url = "https://github.com/can1357/oh-my-pi/releases/download/v18.1.17/omp-linux-x64"
+url_api = "https://api.github.com/repos/can1357/oh-my-pi/releases/assets/555681800"
+
+[tools.oh-my-pi."platforms.linux-x64-musl"]
+checksum = "sha256:6f8db6439b9a5c5eb9b7b6257d7de648034e9178322fac15d0abda6ad0940134"
+url = "https://github.com/can1357/oh-my-pi/releases/download/v18.1.17/omp-linux-musl-x64"
+url_api = "https://api.github.com/repos/can1357/oh-my-pi/releases/assets/555681819"
+
+[tools.oh-my-pi."platforms.macos-arm64"]
+checksum = "sha256:1c310974d4be8de4e5b7285e9c52647321b412c219790fe0243cf804d5c9d5cc"
+url = "https://github.com/can1357/oh-my-pi/releases/download/v18.1.17/omp-darwin-arm64"
+url_api = "https://api.github.com/repos/can1357/oh-my-pi/releases/assets/555681811"
+
+[tools.oh-my-pi."platforms.macos-x64"]
+checksum = "sha256:6299ea1c91ebe80de07b98280bb45c7b8df7892a20ecf4f819cf660ca7e7cee0"
+url = "https://github.com/can1357/oh-my-pi/releases/download/v18.1.17/omp-darwin-x64"
+url_api = "https://api.github.com/repos/can1357/oh-my-pi/releases/assets/555681813"
+
+[tools.oh-my-pi."platforms.windows-x64"]
+checksum = "sha256:5af22031e2f417b8cbbb09d248a8d5116c929df4fbbd0a1ad21dc1c88b9235dd"
+url = "https://github.com/can1357/oh-my-pi/releases/download/v18.1.17/omp-windows-x64.exe"
+url_api = "https://api.github.com/repos/can1357/oh-my-pi/releases/assets/555681802"
+
 [[tools.oh-my-posh]]
-version = "31.1.1"
+version = "31.2.1"
 backend = "aqua:JanDeDobbeleer/oh-my-posh"
 
 [tools.oh-my-posh."platforms.linux-arm64"]
-checksum = "sha256:08f139eb2cf74fb9a7cdfb678861418daf1daf195105a8b387c3a608e27b02bc"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.1.1/posh-linux-arm64"
+checksum = "sha256:8aa3b239d8a7a4daff9da201f8015bc36c7428d79d0fa7019ed55c4edb439072"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.2.1/posh-linux-arm64"
+url_api = "https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/releases/assets/551036512"
 
 [tools.oh-my-posh."platforms.linux-arm64-musl"]
-checksum = "sha256:08f139eb2cf74fb9a7cdfb678861418daf1daf195105a8b387c3a608e27b02bc"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.1.1/posh-linux-arm64"
+checksum = "sha256:8aa3b239d8a7a4daff9da201f8015bc36c7428d79d0fa7019ed55c4edb439072"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.2.1/posh-linux-arm64"
+url_api = "https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/releases/assets/551036512"
 
 [tools.oh-my-posh."platforms.linux-x64"]
-checksum = "sha256:eb7bf6f68f25ffab0388d757832ea5636ec14844d0aa63f8edbdfc424acde5fa"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.1.1/posh-linux-amd64"
+checksum = "sha256:7764f2ba056cdfa7194562239cf5c37bdc5518217db5009defb00ce8cd1ef752"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.2.1/posh-linux-amd64"
+url_api = "https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/releases/assets/551036491"
 
 [tools.oh-my-posh."platforms.linux-x64-musl"]
-checksum = "sha256:eb7bf6f68f25ffab0388d757832ea5636ec14844d0aa63f8edbdfc424acde5fa"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.1.1/posh-linux-amd64"
+checksum = "sha256:7764f2ba056cdfa7194562239cf5c37bdc5518217db5009defb00ce8cd1ef752"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.2.1/posh-linux-amd64"
+url_api = "https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/releases/assets/551036491"
 
 [tools.oh-my-posh."platforms.macos-arm64"]
-checksum = "sha256:2c2212a834c805a4707178a19c7613d3485ab375f56c4c10ff5d554f3ac32353"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.1.1/posh-darwin-arm64"
+checksum = "sha256:0658522f7119bf545137f504fad6c0d2f7016b2826f876f38b919fdff07c922f"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.2.1/posh-darwin-arm64"
+url_api = "https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/releases/assets/551036505"
 
 [tools.oh-my-posh."platforms.macos-x64"]
-checksum = "sha256:6c0a8471bd2bc60af2e51613d235b589c2066e185d5b861d57980349f047fe6d"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.1.1/posh-darwin-amd64"
+checksum = "sha256:0a954a2cbaaa97e04b2d37f442af9bdae1a64927dce9d275150f46a7002a64ba"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.2.1/posh-darwin-amd64"
+url_api = "https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/releases/assets/551036497"
 
 [tools.oh-my-posh."platforms.windows-x64"]
-checksum = "sha256:d71eb92e209b621f7b018b26aa8ed297d6217298baf5d45d1656f603e8a3a825"
-url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.1.1/posh-windows-amd64.exe"
+checksum = "sha256:13c8b6142f71323f8937508388e57e055140d30bcd781599b1d30b26e32d6dd0"
+url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.2.1/posh-windows-amd64.exe"
+url_api = "https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/releases/assets/551036509"
 
 [[tools.packer]]
 version = "1.16.0"
@@ -1396,6 +1442,45 @@ url = "https://releases.hashicorp.com/packer/1.16.0/packer_1.16.0_darwin_amd64.z
 [tools.packer."platforms.windows-x64"]
 checksum = "sha256:91a378d4e7f9c5363caa196e23fd78717da31d12fc6069c8bb892cdacceb2eb8"
 url = "https://releases.hashicorp.com/packer/1.16.0/packer_1.16.0_windows_amd64.zip"
+
+[[tools.pi]]
+version = "0.85.1"
+backend = "aqua:earendil-works/pi"
+
+[tools.pi."platforms.linux-arm64"]
+checksum = "sha256:042d20ae885ee4f3b102815f3280b962c377b2e9fb44de4037908cc530eae4d4"
+url = "https://github.com/earendil-works/pi/releases/download/v0.85.1/pi-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/545797549"
+
+[tools.pi."platforms.linux-arm64-musl"]
+checksum = "sha256:042d20ae885ee4f3b102815f3280b962c377b2e9fb44de4037908cc530eae4d4"
+url = "https://github.com/earendil-works/pi/releases/download/v0.85.1/pi-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/545797549"
+
+[tools.pi."platforms.linux-x64"]
+checksum = "sha256:494e498f47d74d21f40b3386f6a5e921a3d49531a169cab55bbdaca0ea1fe25a"
+url = "https://github.com/earendil-works/pi/releases/download/v0.85.1/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/545797547"
+
+[tools.pi."platforms.linux-x64-musl"]
+checksum = "sha256:494e498f47d74d21f40b3386f6a5e921a3d49531a169cab55bbdaca0ea1fe25a"
+url = "https://github.com/earendil-works/pi/releases/download/v0.85.1/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/545797547"
+
+[tools.pi."platforms.macos-arm64"]
+checksum = "sha256:d5f70e3c0cf7398eac239fd0261ee074d98b7ba7f6b43fe3617f052ed5b79d06"
+url = "https://github.com/earendil-works/pi/releases/download/v0.85.1/pi-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/545797550"
+
+[tools.pi."platforms.macos-x64"]
+checksum = "sha256:adb918b845625f184d8bea408d55eacaf21aa87238793c0f5b4f3b9737bce62b"
+url = "https://github.com/earendil-works/pi/releases/download/v0.85.1/pi-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/545797548"
+
+[tools.pi."platforms.windows-x64"]
+checksum = "sha256:002fa95b90d521245b9985d8f168caebc237ad56e7e30b319807dee1b2e17e1c"
+url = "https://github.com/earendil-works/pi/releases/download/v0.85.1/pi-windows-x64.zip"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/545797560"
 
 [[tools.pipx]]
 version = "1.17.1"
@@ -2018,36 +2103,43 @@ checksum = "sha256:b77c34a18d10fb3c9338ef292a59de00f3d695aa423fd3b6ff617ef6840e2
 url = "https://github.com/sachaos/viddy/releases/download/v1.3.1/viddy-v1.3.1-windows-x86_64.tar.gz"
 
 [[tools.watchexec]]
-version = "2.7.0"
+version = "2.7.2"
 backend = "aqua:watchexec/watchexec"
 
 [tools.watchexec."platforms.linux-arm64"]
-checksum = "sha256:a24a0362c89106cb6af23316dcc538bcb8ee28d067d770badb474850deadad38"
-url = "https://github.com/watchexec/watchexec/releases/download/v2.7.0/watchexec-2.7.0-aarch64-unknown-linux-musl.tar.xz"
+checksum = "sha256:b41387ec129119500085f34ffed619058cae2c944ed76fada63b30e37bc49b47"
+url = "https://github.com/watchexec/watchexec/releases/download/v2.7.2/watchexec-2.7.2-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/watchexec/watchexec/releases/assets/546730415"
 
 [tools.watchexec."platforms.linux-arm64-musl"]
-checksum = "sha256:a24a0362c89106cb6af23316dcc538bcb8ee28d067d770badb474850deadad38"
-url = "https://github.com/watchexec/watchexec/releases/download/v2.7.0/watchexec-2.7.0-aarch64-unknown-linux-musl.tar.xz"
+checksum = "sha256:83cbce2ffc85adaab14d6ded09b292f4383358ac6d9a51b4e4e083df0cb7c831"
+url = "https://github.com/watchexec/watchexec/releases/download/v2.7.2/watchexec-2.7.2-aarch64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/watchexec/watchexec/releases/assets/546730412"
 
 [tools.watchexec."platforms.linux-x64"]
-checksum = "sha256:480065f4459b9f7fb25927ac43df85ff7f46a9b25d04f90001022b875ab0b1a5"
-url = "https://github.com/watchexec/watchexec/releases/download/v2.7.0/watchexec-2.7.0-x86_64-unknown-linux-musl.tar.xz"
+checksum = "sha256:b5b3cf6fd45ce2503bae90ba4017f85d62314b427b91c06818ff39a4c46930c4"
+url = "https://github.com/watchexec/watchexec/releases/download/v2.7.2/watchexec-2.7.2-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/watchexec/watchexec/releases/assets/546730436"
 
 [tools.watchexec."platforms.linux-x64-musl"]
-checksum = "sha256:480065f4459b9f7fb25927ac43df85ff7f46a9b25d04f90001022b875ab0b1a5"
-url = "https://github.com/watchexec/watchexec/releases/download/v2.7.0/watchexec-2.7.0-x86_64-unknown-linux-musl.tar.xz"
+checksum = "sha256:a2c01f82fb4cdafca1fa12cb88e4a1145dec63364dbdf92664efbaac3bb44dd2"
+url = "https://github.com/watchexec/watchexec/releases/download/v2.7.2/watchexec-2.7.2-x86_64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/watchexec/watchexec/releases/assets/546730471"
 
 [tools.watchexec."platforms.macos-arm64"]
-checksum = "sha256:63402816e7efbe3b3fe6f418d476d57f236bc63de7cfd6f1badc50b254b295fb"
-url = "https://github.com/watchexec/watchexec/releases/download/v2.7.0/watchexec-2.7.0-aarch64-apple-darwin.tar.xz"
+checksum = "sha256:31e553b7160720796266168987c5e0728c388cc4776a26297b6a9feb00ab6437"
+url = "https://github.com/watchexec/watchexec/releases/download/v2.7.2/watchexec-2.7.2-aarch64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/watchexec/watchexec/releases/assets/546730424"
 
 [tools.watchexec."platforms.macos-x64"]
-checksum = "sha256:765e2fdcf7142e3ec228ec5a25597d09a16842c5860cdbbac713d035488a2f82"
-url = "https://github.com/watchexec/watchexec/releases/download/v2.7.0/watchexec-2.7.0-x86_64-apple-darwin.tar.xz"
+checksum = "sha256:6a5481a14165f30da8826c7ae1ab3501402328834e7e2483d7c8b7ec4e608810"
+url = "https://github.com/watchexec/watchexec/releases/download/v2.7.2/watchexec-2.7.2-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/watchexec/watchexec/releases/assets/546730396"
 
 [tools.watchexec."platforms.windows-x64"]
-checksum = "sha256:33519183d6ba6641dcdd12994e06a4aaaa5fd2083a41143c8484ffe793408f5f"
-url = "https://github.com/watchexec/watchexec/releases/download/v2.7.0/watchexec-2.7.0-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:aeabeecbd3eaad0bc8f555790eb7437ecd6cf1caae9bb93fb4e678f43f342d1d"
+url = "https://github.com/watchexec/watchexec/releases/download/v2.7.2/watchexec-2.7.2-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/watchexec/watchexec/releases/assets/546730427"
 
 [[tools.yazi]]
 version = "26.8.15"

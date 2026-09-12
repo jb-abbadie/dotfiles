@@ -2,8 +2,8 @@
 kubecolor = "0.7.1"
 "cargo:stu" = "latest"
 slsa-verifier = "latest"
-watchexec = "2.7.0"
-oh-my-posh = "31.1.1"
+watchexec = "2.7.2"
+oh-my-posh = "31.2.1"
 
 [settings]
 idiomatic_version_file_enable_tools = []
