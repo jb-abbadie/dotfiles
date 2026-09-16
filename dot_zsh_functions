@@ -98,7 +98,7 @@ argo-hard-refresh () {
 _omp_git_rel_path () {
   local root
   if root=$(command git rev-parse --show-toplevel 2>/dev/null); then
-    local rel="${PWD#$root}"
+    local rel="${${PWD:A}#"$root"}"
     export OMP_GIT_REL_PATH="${root:t}${rel}"
   else
     unset OMP_GIT_REL_PATH
