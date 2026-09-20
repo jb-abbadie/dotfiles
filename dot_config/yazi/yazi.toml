@@ -5,4 +5,3 @@ max_height = 1800
 [opener]
 extract = [
 	{ run = "ya pub extract --list %s", desc = "Extract here" },
--
