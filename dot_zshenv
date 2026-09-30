@@ -1,3 +1,5 @@
+typeset -U path PATH
+
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH:$HOME/prog/go/bin:$HOME/.cargo/bin:$HOME/.krew/bin:/usr/local/go/bin"
 export AWS_SDK_LOAD_CONFIG=1
 export EDITOR="nvim"
