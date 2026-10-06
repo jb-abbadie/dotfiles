@@ -5,9 +5,6 @@ shell = "zsh"
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 
-[plugins.input]
-github = "zimfw/input"
-
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 

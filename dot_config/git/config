@@ -1,14 +1,12 @@
 [user]
   email = jb-abbadie@users.noreply.github.com
   name = jb-abbadie
-  signingkey = ~/.ssh/id_github
 
 [gpg]
   format = ssh
 
 [commit]
   verbose = true
-  gpgsign = true
 
 [core]
   excludesfile = ~/.config/git/gitignore_global
