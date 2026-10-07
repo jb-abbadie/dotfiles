@@ -73,6 +73,7 @@
 .config/mimeapps.list
 .config/mise/conf.d/priv.toml
 .config/mise/conf.d/pro.toml
+.config/mise/mise.lock
 .config/mpd
 .config/mpv
 .config/nvim/.neoconf.json
