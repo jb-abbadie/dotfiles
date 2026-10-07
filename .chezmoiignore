@@ -1,4 +1,3 @@
-!.ssh/config
 .Xauthority
 .ansible
 .ansible-console_history
@@ -150,7 +149,9 @@
 .rustup
 .screenlayout
 .sqlite_history
-.ssh
+# Manage only SSH config; leave keys, known_hosts, and sockets unmanaged.
+.ssh/*
+!.ssh/config
 .swt
 .talos
 .terraform.d
