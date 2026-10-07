@@ -20,7 +20,7 @@ alignment = "left"
   foreground = "#89b4fa"
   template = "{{ if .Env.OMP_GIT_REL_PATH }}{{ .Env.OMP_GIT_REL_PATH }}{{ else }}{{ .Path }}{{ end }}"
 
-    [blocks.segments.properties]
+    [blocks.segments.options]
     style = "agnoster_short"
     max_depth = 3
     folder_separator_icon = "/"
@@ -37,7 +37,7 @@ alignment = "left"
   ]
   template = " ({{ .HEAD }}{{ if gt .Ahead 0 }} +{{ .Ahead }}{{ end }}{{ if gt .Behind 0 }} -{{ .Behind }}{{ end }}{{ if .Working.Changed }} *{{ end }}{{ if .Staging.Changed }} +{{ end }})"
 
-    [blocks.segments.properties]
+    [blocks.segments.options]
     fetch_status = true
     branch_icon = ""
 
@@ -52,7 +52,7 @@ alignment = "right"
   foreground_templates = ["{{ if gt .Code 0 }}#f38ba8{{ end }}"]
   template = "{{ if gt .Code 0 }}[{{ .Code }}]{{ else }}[ok]{{ end }}"
 
-    [blocks.segments.properties]
+    [blocks.segments.options]
     always_enabled = true
 
   [[blocks.segments]]
@@ -61,7 +61,7 @@ alignment = "right"
   foreground = "#9399b2"
   template = " {{ .FormattedMs }}"
 
-    [blocks.segments.properties]
+    [blocks.segments.options]
     threshold = 500
     style = "round"
 
