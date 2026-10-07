@@ -6,8 +6,6 @@ export EDITOR="nvim"
 export DOCKER_BUILDKIT=1
 export WORDCHARS=$WORDCHARS:s:/:
 
-export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
-
 # ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 

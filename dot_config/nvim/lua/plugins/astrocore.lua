@@ -25,9 +25,6 @@ return {
 		-- passed to `vim.filetype.add`
 		filetypes = {
 			-- see `:h vim.filetype.add` for usage
-			extension = {
-				tf = "terraform",
-			},
 			filename = {
 				[".foorc"] = "fooscript",
 			},

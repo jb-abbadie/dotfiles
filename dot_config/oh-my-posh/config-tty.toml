@@ -26,12 +26,6 @@ alignment = "left"
     folder_separator_icon = "/"
 
   [[blocks.segments]]
-  type = "terraform"
-  style = "plain"
-  foreground = "#b4befe"
-  template = "{{ if glob \"*.tf\" }} [tf:{{ .WorkspaceName }}]{{ end }}"
-
-  [[blocks.segments]]
   type = "git"
   style = "plain"
   foreground = "#a6e3a1"

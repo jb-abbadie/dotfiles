@@ -37,7 +37,6 @@ eval "$(sheldon source)"
 
 autoload bashcompinit && bashcompinit
 complete -C "$(which aws_completer)" aws
-complete -o nospace -C "$(which terraform)" terraform
 complete -o nospace -o default -o bashdefault -F _az_python_argcomplete "az"
 
 # Make "kubecolor" borrow the same completion logic as "kubectl"

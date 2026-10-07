@@ -44,14 +44,6 @@ alignment = "left"
     folder_separator_icon = "/"
 
   [[blocks.segments]]
-  type = "terraform"
-  style = "powerline"
-  powerline_symbol = ""
-  foreground = "#11111b"
-  background = "#b4befe"
-  template = "{{ if glob \"*.tf\" }} \U000F1062 {{ .WorkspaceName }} {{ end }}"
-
-  [[blocks.segments]]
   type = "git"
   style = "powerline"
   powerline_symbol = ""
@@ -75,7 +67,7 @@ alignment = "left"
   style = "plain"
   background = "transparent"
   foreground = "#89b4fa"
-  template = "{{ if and (not (.Segments.Contains \"Git\")) (not (.Segments.Contains \"Terraform\")) }}{{ end }}"
+  template = "{{ if not (.Segments.Contains \"Git\") }}{{ end }}"
 
 [[blocks]]
 type = "prompt"
