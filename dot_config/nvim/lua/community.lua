@@ -10,4 +10,6 @@ return {
 	{ import = "astrocommunity.pack.rust" },
 	{ import = "astrocommunity.pack.lua" },
 	-- import/override with your plugins folder
+	{ import = "astrocommunity.note-taking.zk-nvim" },
+	{ import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 }
