@@ -2,10 +2,10 @@
 kubecolor = "0.8.0"
 "cargo:stu" = "latest"
 slsa-verifier = "latest"
-watchexec = "2.7.3"
-oh-my-posh = "31.3.0"
+watchexec = "2.7.4"
+oh-my-posh = "31.4.1"
 node = "26.8.1"
-oh-my-pi = { version = "18.4.3", rename_exe = "omp" }
+oh-my-pi = { version = "18.6.1", rename_exe = "omp" }
 
 [settings]
 idiomatic_version_file_enable_tools = []
